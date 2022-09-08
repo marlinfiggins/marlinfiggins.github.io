@@ -59,7 +59,6 @@ title-slide-attributes:
 
 ![](./figures/ga_consensus.png)
 
-
 ## Developing tools for analyzing epidemics
 
 - How did we go from a one-off model to a tool that we can continually use?
