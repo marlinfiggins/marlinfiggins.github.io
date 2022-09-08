@@ -3,11 +3,6 @@ author: Marlin Figgins
 title: "Epidemics, evolution, and too much math"
 subtitle: "Computational methods for forecasting viral evolution"
 date: "Sept. 8, 2022"
-format:
-    revealjs:
-        theme: [default, talks.scss]
-        width: 1050
-        height: 700
 slide-number: "c/t"
 title-block-banner: true
 title-slide-attributes:
