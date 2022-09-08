@@ -144,7 +144,7 @@
     "href": "talks/FredHutchCareerExploration/FHCareerExploration.html#takeaways",
     "title": "Epidemics, evolution, and too much math",
     "section": "Takeaways",
-    "text": "Takeaways\n\nUnderstanding epidemics is complicated by feedback loop between evolution and transmission\nMathematics and statistics are tools for analyzing data with these tools in mind.\nOnce we have an idea in mind, we can build re-usable and customizable tools for analyzing new data.\nThis allows us to make many forecasts as we receive new data and opens the door for evolutionary forecasting"
+    "text": "Takeaways\n\nUnderstanding epidemics is complicated by feedback loop between evolution and transmission\nMathematics and statistics are tools for analyzing data that can provide new insight.\nOnce we have an idea in mind, we can build re-usable and customizable tools for analyzing new data to make new analyses easier.\nThis allows us to make many forecasts as we receive new data and opens the door for evolutionary forecasting"
   },
   {
     "objectID": "talks/FredHutchCareerExploration/FHCareerExploration.html#questions",

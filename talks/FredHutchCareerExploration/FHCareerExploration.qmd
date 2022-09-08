@@ -67,8 +67,8 @@ title-slide-attributes:
 
 ## Takeaways
 - Understanding epidemics is complicated by feedback loop between evolution and transmission
-- Mathematics and statistics are tools for analyzing data with these tools in mind.
-- Once we have an idea in mind, we can build **re-usable** and **customizable** tools for analyzing new data.
+- Mathematics and statistics are tools for analyzing data that can provide new insight.
+- Once we have an idea in mind, we can build **re-usable** and **customizable** tools for analyzing new data to make new analyses easier.
 - This allows us to make many forecasts as we receive new data and opens the door for evolutionary forecasting
 
 ## Questions?
