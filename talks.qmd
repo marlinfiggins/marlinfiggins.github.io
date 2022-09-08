@@ -2,7 +2,7 @@
 title: "Talks"
 listing:
   - id: talks
-    contents: .
+    contents: ./talks/
     sort: "date desc"
     type: grid
     categories: true

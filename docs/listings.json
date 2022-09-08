@@ -1,5 +1,11 @@
 [
   {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/FredHutchCareerExploration/FHCareerExploration.html"
+    ]
+  },
+  {
     "listing": "/publications/publications.html",
     "items": [
       "/publications/hct-omicron/hct-omicron.html",

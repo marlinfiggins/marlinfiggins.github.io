@@ -16,6 +16,8 @@ website:
         text: Blog
       - href: publications/publications.qmd
         text: Publications
+      - href: talks.qmd
+        text: Talks
     right: 
       - text: Marlin Figgins
   page-footer:
