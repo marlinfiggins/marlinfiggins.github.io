@@ -1,0 +1,49 @@
+---
+title: "Methods for epidemic-evolutionary forecasting"
+page-layout: full
+title-block-banner: true
+toc: false
+---
+
+## Epidemic-Evolutionary dynamics
+
+### Epidemic and evolutionary dynamics can occur on similar time scales
+
+Population dynamics and evolution can occur on similar time scales when mutation occurs rapidly along replication.
+The case of transmission of infectious diseases is an especially interesting example of this.
+
+As infected individuals transmit to one another, pathogens can accumulate mutations which can change the potential for escape from immune responses, increased transmissibility, and/or can lead to differential fitness for different genetic variants.
+
+::: {.fig-align="center"}
+![Transmission tree for a two variant system. Dashed lines denote new mutations.](./assets/research_images/transmission_tree_colored.png){width=50%}
+:::
+<!---->
+<!-- ![Fraction of infections due to each variant over time.](./assets/research_images/variant_fractions.png) -->
+
+### Inferring variant-specific growth rates and advantages
+In order to quantify the fitness of genetic variants at transmission, we ([Figgins and Bedford 2022](publications/rt-from-frequency-dynamics/rt-from-frequency-dynamics.html)) developed a method from learning effective reproduction numbers and variant relative growth advantages using sequence and case count data. We apply this method to several US states to learn about the growth advantages for SARS-CoV-2 variants of concern.
+
+
+## Improving evolutionary forecasts
+
+### Forecasting evolution can be useful for improving vaccination
+
+As viruses mutate, vaccine effectiveness can wane due to immune mismatch between circulating virus strains and strains used in vaccines.
+For viruses like SARS-CoV-2 and influenza understanding how viruses differ in their fitness can help us to better forecast their evolution.
+This allows us better understand the process of evolution itself, but also has practical applications in improving vaccines.
+
+Currently, I am interested in tying in mechanistic models of transmission, immunity, and recovery to improve methods for evolutionary forecasting.
+The hope is that by including more information about these processes, we can gain better estimates of relative fitness and better forecasts for virus populations.
+
+## Tool-building enables others to learn and contribute
+
+### We build tools to make science more accessible and collaborative
+
+In general, I am motivated by the desire to build tools to help folks answer questions they have about epidemics and how pathogens evolve.
+For this purpose, much of my time is dedicated to making sure the models and methods I develop are available freely and well documented, so that others can learn about them and make their own contributions to science.
+
+### Science communication and education comes with the territory
+
+In my opinion, science is the process of asking questions, answering questions, and presenting information.
+Further, I believe an important part of the process of doing science or really any kind of inquiry is enabling others to take action.
+To me, this primarily means creating resources for others to use whether that be educational material, a new software package, or any other tool.

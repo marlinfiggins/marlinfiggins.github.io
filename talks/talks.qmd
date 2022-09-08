@@ -1,0 +1,21 @@
+---
+title: "Talks"
+listing:
+  - id: talks
+    contents: .
+    sort: "date desc"
+    type: grid
+    categories: true
+    sort-ui: false
+    filter-ui: false
+page-layout: article
+title-block-banner: true
+format:
+    html
+---
+
+
+This will be a page where I keep my slides
+
+:::{#talks}
+:::

@@ -1,0 +1,90 @@
+---
+page-layout: full
+image: assets/avatar.jpeg
+title-block-banner: true
+toc: false
+about:
+  id: about-me
+  template: trestles
+  image-width: 12em
+  image-shape: round
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/marlinfiggins
+    - icon: github
+      text: Github
+      href: https://github.com/marlinfiggins
+    - icon: resume
+      text: CV
+      href: https://www.dropbox.com/s/g2077hlx8im9nek/MarlinFigginsCV.pdf?dl=0
+listing:
+  - id: blog-posts
+    contents: "blog/*/*.qmd"
+    sort: "date desc"
+    type: grid
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    max-description-length: 0
+    max-items: 3
+    fields: 
+      - title
+      - date
+      - image
+---
+
+:::{#about-me}
+
+## Welcome to my website!
+
+My name is Marlin Figgins.
+I am a third-year PhD candidate in the [University of Washington’s Department of Applied Mathematics](https://amath.washington.edu/people/marlin-figgins) as a Boeing, ARCS, and NSF GRFP fellow. 
+
+I currently develop methods for modeling, Bayesian inference, and forecasting of epidemic and evolutionary dynamics of respiratory viruses in the [Bedford lab](https://bedford.io/) at the Fred Hutchinson Cancer Research Center. You can learn more about this work on the [Research](research.qmd) page.
+
+For further details on my professional life, you can view and download my CV in PDF format on this page.
+
+### Get in contact?
+
+My personal email is marlinfiggins [at] gmail [dot] com, but I can also be reached mfiggins [at] uw [dot] edu.
+
+
+<!-- ## Education -->
+<!---->
+<!-- **University of Washington, Seattle** | Seattle, WA -->
+<!---->
+<!-- PhD in Applied Mathematics | Sep 2020 -- present -->
+<!---->
+<!-- M.S in Applied Mathematics | Sep 2020 -- June 2021 -->
+<!---->
+<!-- **University of Chicago** | Chicago, IL -->
+<!---->
+<!-- B.S in Mathematics | Sep 2016 -- Dec 2019 -->
+
+:::
+
+
+## Most recent blog posts
+
+:::{#blog-posts}
+:::
+
+
+  <!-- - id: talks -->
+  <!--   contents: "talks/*/*.qmd" -->
+  <!--   sort: "date desc" -->
+  <!--   type: grid -->
+  <!--   categories: true -->
+  <!--   sort-ui: false -->
+  <!--   filter-ui: false -->
+  <!--   max-items: 3 -->
+  <!--   fields:  -->
+  <!--     - title -->
+  <!--     - date -->
+<!-- ## [Recent talks](talks/talks.qmd) -->
+<!---->
+<!-- :::{#talks} -->
+<!-- ::: -->
+
+

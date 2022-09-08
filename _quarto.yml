@@ -1,0 +1,36 @@
+project:
+  type: website
+
+website:
+  title: "Marlin Figgins"
+  search: false
+  navbar:
+    title: false
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: blog/blog.qmd
+        text: Blog
+      - href: publications/publications.qmd
+        text: Publications
+    right: 
+      - text: Marlin Figgins
+  page-footer:
+    left: "Copyright 2022, Marlin Figgins"
+    right:
+      - icon: github
+        href: https://github.com/marlinfiggins
+      - icon: twitter
+        href: https://twitter.com/marlinfiggins
+      - icon: linkedin
+        href: https://www.linkedin.com/in/marlin-figgins
+
+format:
+  html:
+    theme: 
+      light: custom.scss
+      dark: [custom.scss, custom-dark.scss]
+    css: styles.css
+    toc: false

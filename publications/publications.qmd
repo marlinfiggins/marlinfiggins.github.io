@@ -1,0 +1,18 @@
+---
+title: Publications
+listing:
+  - id: publications
+    contents: .
+    sort: "date desc"
+    categories: true
+    sort-ui: false
+    filter-ui: false
+    fields: [title, short_cite]
+    categories: false
+page-layout: article
+title-block-banner: true
+---
+
+<!-- Adding figures here could be very nice -->
+:::{#publications}
+:::
