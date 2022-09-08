@@ -1,0 +1,86 @@
+---
+author: Marlin Figgins
+title: "Epidemics, evolution, and too much math"
+subtitle: "Computational methods for forecasting viral evolution"
+date: "Sept. 8, 2022"
+format:
+    revealjs:
+        theme: [default, talks.scss]
+        width: 1050
+        height: 700
+slide-number: "c/t"
+title-block-banner: true
+title-slide-attributes:
+    data-background-color: "#e6f3ff"
+---
+
+<!-- ## Outline -->
+<!-- - What do I want students to take away from this? -->
+<!--     - Evolution is awesome -->
+<!--     - Virus follow evolutionary processes fast enough for us to observe -->
+<!--     - Why variants exist? -->
+<!--     - Why we're interested in predicting evolution? -->
+<!--     - Evolution and transmission are intimately related -->
+<!--     - Mathematics and statistics are good tools for understanding populations -->
+<!-- - What is needed to establish this? -->
+<!--     - Evolution and transmission occur on same timescale -->
+<!--     - Mutation can lead to phenotypic differences between viruses -> affects spread -->
+<!--     - How do we visualize evolution? -->
+<!--     - How do we quantify this spread? -->
+<!--     - How can we do both at once? -->
+<!--         - MLR -->
+<!--         - Combining in knowledge from epidemic models -->
+<!--     - Predicting evolution -->
+
+## Who am I?
+
+- UChicago alumnus (BS, Mathematics 2019)
+- Current PhD student in Applied Math at Fred Hutch and the University of Washington in the Bedford lab.
+- Now, I study transmission and evolution of pathogens like influenza and SARS-CoV-2.
+
+## Epidemics are often observed with counts
+
+![](./figures/raw_cases.svg)
+
+## We use $R_{t}$ to infer the direction of epidemics
+
+![](./figures/posterior_aggegrate_Rt.svg){.fig-align="center"}
+
+## Pathogens have an evolutionary history
+
+![](./figures/transmission_tree_offspring_gray.svg)
+
+## Mutation can lead to transmission differences
+
+![](./figures/transmission_tree_offspring_colored.svg)
+
+## Variant differences may not show in cases
+
+![](./figures/variant_cases.svg)
+
+## Variant frequencies allow us to monitor change
+
+![](./figures/raw_frequency.svg)
+
+## Turning frequencies into growth advantages
+
+![](./figures/posterior_mlr_frequency.svg)
+
+## Transmission models with various strains
+
+![](./figures/posterior_variants_Rt.svg){.fig-align="center"}
+
+## Developing tools for analyzing epidemics
+
+- How did we go from a one-off model to a tool that we can continually use?
+- My research is focused on building tools and toolkits for analyzing evolution of pathogens.
+- This includes both software (like that used to make today's figures) and mathematical machinery that teaches how and why growth advantages may appear between pathogen variants.
+
+## Takeaways
+- Understanding epidemics is complicated by feedback loop between evolution and transmission
+- Mathematics and statistics are tools for analyzing data with these tools in mind.
+- Once we have an idea in mind, we can build **re-usable** and **customizable** tools for analyzing new data.
+- This allows us to make many forecasts as we receive new data and opens the door for evolutionary forecasting
+
+## Questions?
+

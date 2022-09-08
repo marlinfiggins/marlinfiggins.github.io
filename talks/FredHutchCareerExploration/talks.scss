@@ -1,0 +1,41 @@
+/*-- scss:defaults --*/
+
+// $body-bg: #191919;
+// $body-color: #fff;
+$body-bg: #fff !default;
+$body-color: #191919 !default;
+$link-color: #7d77f2 !default;
+
+
+// headings
+// $font-family-sans-serif: "Noto Sans Light";
+$font-family-sans-serif: "Lato Light";
+$font-family-monospace: "Fira Code";
+$code-block-font-size: 0.8em;
+$presentation-heading-color: $body-color !default;
+$presentation-heading-font-weight: 400;
+$presentation-font-size-root: 26px;
+/*-- scss:rules --*/
+
+.reveal {
+  font-family: $font-family-sans-serif, sans-serif;
+  font-size: $presentation-font-size-root;
+  font-weight: 400;
+}
+
+.reveal h1 {
+  font-size: 2.2em; 
+}
+
+.reveal h2 {
+  font-size: 2.0em; 
+}
+
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
+}
+
+.reveal a {
+  line-height: 1.3em;
+}
