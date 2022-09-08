@@ -9,24 +9,6 @@ title-slide-attributes:
     data-background-color: "#e6f3ff"
 ---
 
-<!-- ## Outline -->
-<!-- - What do I want students to take away from this? -->
-<!--     - Evolution is awesome -->
-<!--     - Virus follow evolutionary processes fast enough for us to observe -->
-<!--     - Why variants exist? -->
-<!--     - Why we're interested in predicting evolution? -->
-<!--     - Evolution and transmission are intimately related -->
-<!--     - Mathematics and statistics are good tools for understanding populations -->
-<!-- - What is needed to establish this? -->
-<!--     - Evolution and transmission occur on same timescale -->
-<!--     - Mutation can lead to phenotypic differences between viruses -> affects spread -->
-<!--     - How do we visualize evolution? -->
-<!--     - How do we quantify this spread? -->
-<!--     - How can we do both at once? -->
-<!--         - MLR -->
-<!--         - Combining in knowledge from epidemic models -->
-<!--     - Predicting evolution -->
-
 ## Who am I?
 
 - UChicago alumnus (BS, Mathematics 2019)
@@ -64,6 +46,19 @@ title-slide-attributes:
 ## Transmission models with various strains
 
 ![](./figures/posterior_variants_Rt.svg){.fig-align="center"}
+
+## Applying this to SARS-CoV-2 and COVID-19 in the USA
+
+![](./figures/GARW_rt_Washington.png)
+
+## Applying this to SARS-CoV-2 and COVID-19 in the USA
+
+![](./figures/growth_advantages.png)
+
+## Applying this to SARS-CoV-2 and COVID-19 in the USA
+
+![](./figures/ga_consensus.png)
+
 
 ## Developing tools for analyzing epidemics
 

@@ -37,3 +37,6 @@ format:
       dark: [custom.scss, custom-dark.scss]
     css: styles.css
     toc: false
+
+execute:
+  freeze: true
