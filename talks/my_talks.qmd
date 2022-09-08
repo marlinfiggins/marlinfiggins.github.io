@@ -10,8 +10,6 @@ listing:
     filter-ui: false
 page-layout: article
 title-block-banner: true
-format:
-    html
 ---
 
 
