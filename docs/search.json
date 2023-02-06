@@ -30,9 +30,9 @@
   {
     "objectID": "publications/hct-omicron/hct-omicron.html",
     "href": "publications/hct-omicron/hct-omicron.html",
-    "title": "Mapping the emergence of SARS-CoV-2 Omicron variants on a university campus",
+    "title": "Genomic surveillance of SARS-CoV-2 Omicron variants on a university campus",
     "section": "",
-    "text": "Novel variants continue to emerge in the SARS-CoV-2 pandemic. University testing programs may provide timely epidemiologic and genomic surveillance data to inform public health responses. We conducted testing from September 2021 to February 2022 in a university population under vaccination and indoor mask mandates. A total of 3,048 of 24,393 individuals tested positive for SARS-CoV-2 by RT-PCR; whole genome sequencing identified 209 Delta and 1,730 Omicron genomes of the 1,939 total sequenced. Compared to Delta, Omicron had a shorter median serial interval between genetically identical, symptomatic infections within households (2 versus 6 days, P=0.021). Omicron also demonstrated a greater peak reproductive number (2.4 versus 1.8) and a 1.07 (95% confidence interval: 0.58, 1.57; P<0.0001) higher mean cycle threshold value. Despite near universal vaccination and stringent mitigation measures, Omicron rapidly displaced the Delta variant to become the predominant viral strain and led to a surge in cases in a university population."
+    "text": "Novel variants continue to emerge in the SARS-CoV-2 pandemic. University testing programs may provide timely epidemiologic and genomic surveillance data to inform public health responses. We conducted testing from September 2021 to February 2022 in a university population under vaccination and indoor mask mandates. A total of 3,048 of 24,393 individuals tested positive for SARS-CoV-2 by RT-PCR; whole genome sequencing identified 209 Delta and 1,730 Omicron genomes of the 1,939 total sequenced. Compared to Delta, Omicron had a shorter median serial interval between genetically identical, symptomatic infections within households (2 versus 6 days, P = 0.021). Omicron also demonstrated a greater peak reproductive number (2.4 versus 1.8), and a 1.07 (95% confidence interval: 0.58, 1.57; P < 0.0001) higher mean cycle threshold value. Despite near universal vaccination and stringent mitigation measures, Omicron rapidly displaced the Delta variant to become the predominant viral strain and led to a surge in cases in a university population."
   },
   {
     "objectID": "publications/rt-from-frequency-dynamics/rt-from-frequency-dynamics.html",
@@ -46,7 +46,7 @@
     "href": "publications/publications.html",
     "title": "Publications",
     "section": "",
-    "text": "Weil et al. 2022. medRxiv.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFiggins M, Bedford T. 2021. medRxiv\n\n\n\n\n\n\nNo matching items"
+    "text": "Weil et al. 2022. Nature communications.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFiggins M, Bedford T. 2021. medRxiv\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks/FredHutchCareerExploration/FHCareerExploration.html#who-am-i",
@@ -179,7 +179,7 @@
     "href": "index.html",
     "title": "Marlin Figgins",
     "section": "",
-    "text": "Twitter\n  \n  \n    \n     Github\n  \n  \n    \n     CV\n  \n\n  \n  \n\n\nMy name is Marlin Figgins. I am a third-year PhD candidate in the University of Washington’s Department of Applied Mathematics as a Boeing, ARCS, and NSF GRFP fellow.\nI currently develop methods for modeling, Bayesian inference, and forecasting of epidemic and evolutionary dynamics of respiratory viruses in the Bedford lab at the Fred Hutchinson Cancer Research Center. You can learn more about this work on the Research page.\nFor further details on my professional life, you can view and download my CV in PDF format on this page.\n\n\nMy personal email is marlinfiggins [at] gmail [dot] com, but I can also be reached mfiggins [at] uw [dot] edu."
+    "text": "Twitter\n  \n  \n    \n     Github\n  \n  \n    \n     Resume\n  \n\n  \n  \n\n\nMy name is Marlin Figgins. I am a third-year PhD candidate in the University of Washington’s Department of Applied Mathematics as a Boeing, ARCS, and NSF GRFP fellow.\nI currently develop methods for modeling, Bayesian inference, and forecasting of epidemic and evolutionary dynamics of respiratory viruses in the Bedford lab at the Fred Hutchinson Cancer Research Center. You can learn more about this work on the Research page.\nFor further details on my professional life, you can view and download my CV in PDF format on this page.\n\n\nMy personal email is marlinfiggins [at] gmail [dot] com, but I can also be reached mfiggins [at] uw [dot] edu."
   },
   {
     "objectID": "index.html#most-recent-blog-posts",
@@ -327,5 +327,12 @@
     "title": "Marlin Figgins",
     "section": "",
     "text": "My name is Marlin Figgins and welcome to my blog. I am currently a PhD candidate in the University of Washington’s Department of Applied Mathematics as a Boeing, ARCS, and NSF GRFP fellow.\nI currently develop Bayesian methods for inference and forecasting of epidemic and evolutionary dynamics of respiratory viruses in the Bedford lab at the Fred Hutchinson Cancer Research Center. You can learn about this work and more on the Research page.\nFor more on my professional life, you can check out my CV / Resume in PDF format on this page.\nGet in contact? Stay in contact?\nIf you need to contact me for any reason, my personal email is marlinfiggins [at] gmail [dot] com, but I can also be reached mfiggins [at] uw [dot] edu."
+  },
+  {
+    "objectID": "writing/writing.html",
+    "href": "writing/writing.html",
+    "title": "Writing",
+    "section": "",
+    "text": "2020\nFiction of the Wired: Loneliness and the Limits of the Internet. Smart Museum.\nHomebound: A Microchapbook. Kissing Dynamite Poetry Press.\n\n\n2019\n[ ] Approaches Me in a Coffee Shop Asking Why I Left. Kissing Dynamite Poetry.\nSelf-Portrait with Radio & Moon. Nostrovia Press.\nIf What I’m Told Is True… Frontier Poetry.\nMemphis is the Most Beautiful of Cities. Ghost City Review.\nLetters to Dark Boy: On Rejecting the Body, On the Remnants of Pride. Menacing Hedge.\n\n\n2018\nThe Lost Boy is Quenched. Glass: A Journal of Poetry.\nThe Poet As Glutton. Narrative Northeast.\nBlack As Thin Body. Cotton Xenomorph.\nThe Lost Boy is Romantic. The Shallow Ends.\n\n\nManuscripts in preparation\n\nDark Boy Remaining (poetry, formerly titled Prayers Before the Moon)\nDark Boy and Muse (poetry)\nSTEM and Blood (essays)"
   }
 ]

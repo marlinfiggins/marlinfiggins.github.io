@@ -16,12 +16,14 @@ website:
         text: Blog
       - href: publications/publications.qmd
         text: Publications
+      - href: writing/writing.qmd
+        text: Writing
       - href: talks.qmd
         text: Talks
     right: 
       - text: Marlin Figgins
   page-footer:
-    left: "Copyright 2022, Marlin Figgins"
+    left: "Copyright 2023, Marlin Figgins"
     right:
       - icon: github
         href: https://github.com/marlinfiggins

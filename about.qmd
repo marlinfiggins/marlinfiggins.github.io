@@ -13,12 +13,11 @@ about:
       text: Github
       href: https://github.com/marlinfiggins
     - icon: resume
-      text: CV
-      href: https://www.dropbox.com/s/g2077hlx8im9nek/MarlinFigginsCV.pdf?dl=0
+      text: Resume
+      href: https://www.dropbox.com/s/h1xiko18bli7gj2/Figgins_Resume.pdf?dl=0
 format:
   html:
     page-layout: full
-
 ---
 
 **Who am I?**
