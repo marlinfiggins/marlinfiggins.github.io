@@ -17,7 +17,7 @@ about:
       href: https://github.com/marlinfiggins
     - icon: resume
       text: Resume
-      href: https://www.dropbox.com/s/h1xiko18bli7gj2/Figgins_Resume.pdf?dl=0
+      href: https://www.dropbox.com/s/94c5xw9klh8cdax/Figgins_Resume.pdf?dl=0
 listing:
   - id: blog-posts
     contents: "blog/*/*.qmd"
