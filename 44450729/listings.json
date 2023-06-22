@@ -1,0 +1,31 @@
+[
+  {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/FredHutchCareerExploration/FHCareerExploration.html"
+    ]
+  },
+  {
+    "listing": "/publications/publications.html",
+    "items": [
+      "/publications/hct-omicron/hct-omicron.html",
+      "/publications/rt-from-frequency-dynamics/rt-from-frequency-dynamics.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/blog/intro-to-probability/intro-to-prob.html",
+      "/blog/social-distancing-and-me/2020-03-04-social-distancing-and-me.html",
+      "/blog/chaos/chaos-what-is-it-where-to-find-it.html"
+    ]
+  },
+  {
+    "listing": "/blog/blog.html",
+    "items": [
+      "/blog/intro-to-probability/intro-to-prob.html",
+      "/blog/social-distancing-and-me/2020-03-04-social-distancing-and-me.html",
+      "/blog/chaos/chaos-what-is-it-where-to-find-it.html"
+    ]
+  }
+]
