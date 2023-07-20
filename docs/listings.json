@@ -1,8 +1,20 @@
 [
   {
-    "listing": "/talks.html",
+    "listing": "/blog/blog.html",
     "items": [
-      "/talks/FredHutchCareerExploration/FHCareerExploration.html"
+      "/blog/intro-to-probability/intro-to-prob.html",
+      "/blog/social-distancing-and-me/2020-03-04-social-distancing-and-me.html",
+      "/blog/chaos/chaos-what-is-it-where-to-find-it.html",
+      "/blog/dive-into-caluclus-of-variations/dive-into-the-calculus-of-variations.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/blog/intro-to-probability/intro-to-prob.html",
+      "/blog/social-distancing-and-me/2020-03-04-social-distancing-and-me.html",
+      "/blog/chaos/chaos-what-is-it-where-to-find-it.html",
+      "/blog/dive-into-caluclus-of-variations/dive-into-the-calculus-of-variations.html"
     ]
   },
   {
@@ -13,19 +25,9 @@
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/talks.html",
     "items": [
-      "/blog/intro-to-probability/intro-to-prob.html",
-      "/blog/social-distancing-and-me/2020-03-04-social-distancing-and-me.html",
-      "/blog/chaos/chaos-what-is-it-where-to-find-it.html"
-    ]
-  },
-  {
-    "listing": "/blog/blog.html",
-    "items": [
-      "/blog/intro-to-probability/intro-to-prob.html",
-      "/blog/social-distancing-and-me/2020-03-04-social-distancing-and-me.html",
-      "/blog/chaos/chaos-what-is-it-where-to-find-it.html"
+      "/talks/FredHutchCareerExploration/FHCareerExploration.html"
     ]
   }
 ]
