@@ -4,7 +4,8 @@ types: posts
 title: "Introduction to Probability I"
 subtitle: "Axioms, Conditional Probability, and Bayes' Theorem"
 categories:
-  - Math
+  - Mathematics
+  - Statistics
 date: "2020-08-14"
 ---
 
