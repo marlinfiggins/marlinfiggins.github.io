@@ -20,6 +20,8 @@
   {
     "listing": "/publications/publications.html",
     "items": [
+      "/publications/mpox-dynamics/mpox-dynamics.html",
+      "/publications/ncov-orf8-ko/ncov-orf8-ko.html",
       "/publications/hct-omicron/hct-omicron.html",
       "/publications/rt-from-frequency-dynamics/rt-from-frequency-dynamics.html"
     ]

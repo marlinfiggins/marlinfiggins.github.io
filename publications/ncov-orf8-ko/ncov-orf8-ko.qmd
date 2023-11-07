@@ -1,0 +1,11 @@
+---
+title: "Positive selection underlies repeated knockout of ORF8 in SARS-CoV-2 evolution"
+author: "Cassia Wagner, Kathryn E Kistler, Garrett A Perchetti, Noah Baker, Lauren A Frisbie, Laura Marcela Torres, Frank Aragona, Cory Yun, Marlin Figgins, Alexander L Greninger, Alex Cox, Hanna N Oltean, Pavitra Roychoudhury, Trevor D Bedford"
+doi: "https://doi.org/10.1101/2023.09.21.23295927 "
+short_cite: "Wagner et al. 2023. medRxiv."
+date: "2023-09-23"
+---
+
+## Abstract
+
+Knockout of the ORF8 protein has repeatedly spread through the global viral population during SARS-CoV-2 evolution. Here we use both regional and global pathogen sequencing to explore the selection pressures underlying its loss. In Washington State, we identified transmission clusters with ORF8 knockout throughout SARS-CoV-2 evolution, not just on novel, high fitness viral backbones. Indeed, ORF8 is truncated more frequently and knockouts circulate for longer than for any other gene. Using a global phylogeny, we find evidence of positive selection to explain this phenomenon: nonsense mutations resulting in shortened protein products occur more frequently and are associated with faster clade growth rates than synonymous mutations in ORF8. Loss of ORF8 is also associated with reduced clinical severity, highlighting the diverse clinical impacts of SARS-CoV-2 evolution.
