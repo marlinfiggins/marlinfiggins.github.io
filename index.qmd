@@ -6,7 +6,7 @@ toc: false
 about:
   id: about-me
   template: trestles
-  image-width: 12em
+  image-width: 10em
   image-shape: round
   links:
     - icon: twitter
@@ -36,12 +36,15 @@ listing:
 
 :::{#about-me}
 
-## Welcome to my website!
+## Welcome!
 
 My name is Marlin Figgins.
-I am a PhD candidate in the [University of Washington’s Department of Applied Mathematics](https://amath.washington.edu/people/marlin-figgins) as a Boeing, ARCS, and NSF GRFP fellow. 
+I am a final-year PhD candidate in the [University of Washington’s Department of Applied Mathematics](https://amath.washington.edu/people/marlin-figgins) as a Boeing, ARCS, and NSF GRFP fellow. 
+
+I'm a data scientist passionate about the fusion of applied mathematics, AI, and statistical modeling for practical applications, particularly in health and public health decision-making. My expertise lies in developing advanced statistical models and building scalable tools, with a focus on user-centric design and data-driven insights. I am dedicated to leveraging AI for practical health-related solutions and am involved in mentoring and contributing to open-source projects aimed at health impact.
 
 I currently develop methods for modeling, Bayesian inference, and forecasting of epidemic and evolutionary dynamics of respiratory viruses in the [Bedford lab](https://bedford.io/) at the Fred Hutchinson Cancer Research Center. You can learn more about this work on the [Research](research.qmd) page.
+
 
 For further details on my professional life, you can view and download my CV in PDF format on this page.
 

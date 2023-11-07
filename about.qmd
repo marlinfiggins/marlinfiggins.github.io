@@ -23,7 +23,7 @@ format:
 **Who am I?**
 
 My name is Marlin Figgins and welcome to my blog. 
-I am currently a PhD candidate in the [University of Washington’s Department of Applied Mathematics](https://amath.washington.edu/people/marlin-figgins) as a Boeing, ARCS, and NSF GRFP fellow. 
+I am currently a final year PhD candidate in the [University of Washington’s Department of Applied Mathematics](https://amath.washington.edu/people/marlin-figgins) as a Boeing, ARCS, and NSF GRFP fellow. 
 
 I currently develop Bayesian methods for inference and forecasting of epidemic and evolutionary dynamics of respiratory viruses in the [Bedford lab](https://bedford.io/) at the Fred Hutchinson Cancer Research Center. You can learn about this work and more on the [Research](research) page.
 
