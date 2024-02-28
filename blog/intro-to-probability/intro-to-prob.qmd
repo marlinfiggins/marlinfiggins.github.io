@@ -39,8 +39,6 @@ $$
 \Omega = \Omega_1 \times \Omega_2 = \{ HH, HT, TH, TT\}.
 $$
 
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-toss-2.jpg" height = "200" width = "100" caption="Outcomes $\Omega$: two coins." %} -->
-
 ![Outcomes $\Omega$: two coins.](figures/intro-to-prob-toss-2.jpg)
 
 The coin tossing example is extremely neat in that sense that it serves as a nice foundational example for the larger language around probability which we're trying to develop. As our next step towards that goal, we'll begin by defining a couple of terms.
@@ -56,8 +54,6 @@ For example, we might ask the question: "*When do we have at least one heads?*".
 $$
 E = \{ \omega \mid \text{There is at least one $H$} \} = \{HH, HT, TH \}.
 $$
-
-{% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-event.jpg" height = "200" width = "100" caption="Sample space $\Omega$ and an event $E$." %}
 
 ![Sample space $\Omega$ and an event $E$.](figures/intro-to-prob-event.jpg)
 
@@ -84,8 +80,6 @@ $$
 A \cup B = \{\omega \in A \textbf{ or } \omega \in B \}
 $$
 
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-union.jpg" height = "200" width = "100" caption="Visualizing union ($\cup$)." %} -->
-
 ![Visualizing union ($\cup$)](figures/intro-to-prob-union.jpg)
 
 The intersection is the overlap between two events. It is the set of outcomes that are in both $A$ and $B$ simultaneously.
@@ -93,8 +87,6 @@ The intersection is the overlap between two events. It is the set of outcomes th
 $$
 A \cap B = \{\omega \in A \textbf{ and } \omega \in B \}.
 $$
-
-{% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-intersection.jpg" height = "200" width = "100" caption="Visualizing intersection ($\cap$)." %}
 
 ![Visualizing intersection ($\cap$).](figures/intro-to-prob-intersection.jpg)
 
@@ -121,8 +113,6 @@ A\cup B = \{HH \} \cup \{HH, HT\} = \{HH, HT\} = B.
 $$
 
 The event $A$ is a **subset** of $B$ ($A\subset B$). You can think about this as follows: If both coins show heads, then the first coin obviously did. This is obvious, but it helps us make a general observation. *Sometimes events will completely contain another.* If every outcome in event $A$ is also in event $B$, we say that *$A$ is a subset of $B$* and write $A\subset B$.
-
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-subset.jpg" height = "200" width = "100" caption="Visualizing subsets ($\subset$)." %} -->
 
 ![Visualizing subsets ($\subset$).](figures/intro-to-prob-subset.jpg)
 
@@ -157,8 +147,6 @@ For this section, I'll loosely follow [*Foundations of the Theory of Probability
 In a way, we can think of a probability as a way of measuring an event. Much like how people have weights (in both pounds and kilograms), we can think about creating a type of rule or *measure* $\Prob$ which weights events and collections of events relative to all possible outcomes.
 If we're able to find such a measure, we want it to follow a certain set of rules much like the case of the coin tossing example.
 
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-measure.jpg" height = "200" width = "100" caption="Probability measures $\Prob$ take sets to probabilities." %} -->
-
 ![Probability measures $\Prob$ take sets to probabilities.](figures/intro-to-prob-measure.jpg)
 
 First up is a simple convention, we would like all probabilities that things happen to be $1$. In the simplest case, an event $E$ can either surely occur so that $\Prob(E) = 1$ or it cannot $\Prob(E) = 0$. Therefore, if we look at all possible outcomes simultaneously, we have $\Prob(\Omega) = 1$.
@@ -167,8 +155,6 @@ Since all probabilities are positive or zero, we also require that
 $\Prob(E)\geq 0$ for all events $E$.
 
 Lastly, if two events cannot occur simultaneously i.e. $A \cap B = \varnothing$, then $\Prob(A \cup B) = \Prob(A) + \Prob(B).$
-
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-disjoint-sum.jpg" height = "200" width = "100" caption="Visualizing the disjoint summations." %} -->
 
 ![Visualizing disjoint summations](figures/intro-to-prob-disjoint-sum.jpg)
 
@@ -190,8 +176,6 @@ $$
 
 This also makes sense if we return to the intuition of counting outcomes. If there are more possible outcomes in $B$, then you expect that the chance $B$ occurs is greater than the chance that $A$ occurs as there are now more outcomes to choose from.
 
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-subset-ineq.jpg" height = "200" width = "100" caption="Probability inequality for subsets." %} -->
-
 ![Probability inequality for subsets](figures/intro-to-prob-subset-ineq.jpg)
 
 
@@ -200,8 +184,6 @@ When it comes to taking the union of subsets, there's a more general formula for
 $$
 \Prob(A \cup B) = \Prob(A) + \Prob(B) - \Prob( A \cap B ).
 $$
-
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-sum.jpg" height = "200" width = "100" caption="Visualizing the general summation formula." %} -->
 
 ![Visualizing the general summation formation for probability of events](figures/intro-to-prob-sum.jpg)
 
@@ -227,8 +209,6 @@ $$
 $$
 
 This is equivalent to saying that $\Prob(A \mid B) = \Prob(A)$ and $\Prob(B \mid A ) = \Prob(B)$ which I leave to you as an exercise.
-
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-conditional.jpg" height = "200" width = "100" caption="Conditional probability." %} -->
 
 ![Conditional probability](figures/intro-to-prob-conditional.jpg)
 
@@ -308,8 +288,6 @@ Thinking of this in terms possible outcomes, this equation shows that probabilit
 $$
 \Prob(V+ \mid G-) \approx 0.01 >>> \Prob(V+) = 0.000001.
 $$
-
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-bayes.jpg" height = "200" width = "100" caption="Illustrating Bayes' theorem." %} -->
 
 ![Illustrating Bayes](figures/intro-to-prob-bayes.jpg)
 

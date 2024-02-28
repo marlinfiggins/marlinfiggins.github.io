@@ -171,7 +171,6 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math display">\[
 \Omega = \Omega_1 \times \Omega_2 = \{ HH, HT, TH, TT\}.
 \]</span></p>
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-toss-2.jpg" height = "200" width = "100" caption="Outcomes $\Omega$: two coins." %} -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/intro-to-prob-toss-2.jpg" class="img-fluid figure-img"></p>
@@ -186,7 +185,6 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math display">\[
 E = \{ \omega \mid \text{There is at least one $H$} \} = \{HH, HT, TH \}.
 \]</span></p>
-<p>{% include figure image_path=“/assets/images/intro-to-prob/intro-to-prob-event.jpg” height = “200” width = “100” caption=“Sample space <span class="math inline">\(\Omega\)</span> and an event <span class="math inline">\(E\)</span>.” %}</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/intro-to-prob-event.jpg" class="img-fluid figure-img"></p>
@@ -209,7 +207,6 @@ E^c = \{ \omega \mid \text{There are exactly zero $H$}\}  = \{ TT \}.
 <p><span class="math display">\[
 A \cup B = \{\omega \in A \textbf{ or } \omega \in B \}
 \]</span></p>
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-union.jpg" height = "200" width = "100" caption="Visualizing union ($\cup$)." %} -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/intro-to-prob-union.jpg" class="img-fluid figure-img"></p>
@@ -220,7 +217,6 @@ A \cup B = \{\omega \in A \textbf{ or } \omega \in B \}
 <p><span class="math display">\[
 A \cap B = \{\omega \in A \textbf{ and } \omega \in B \}.
 \]</span></p>
-<p>{% include figure image_path=“/assets/images/intro-to-prob/intro-to-prob-intersection.jpg” height = “200” width = “100” caption=“Visualizing intersection (<span class="math inline">\(\cap\)</span>).” %}</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/intro-to-prob-intersection.jpg" class="img-fluid figure-img"></p>
@@ -241,7 +237,6 @@ B\cup C = \{HH, HT \} \cup \{HT, TT \} = \{HH, HT, TT \}.
 A\cup B = \{HH \} \cup \{HH, HT\} = \{HH, HT\} = B.
 \]</span></p>
 <p>The event <span class="math inline">\(A\)</span> is a <strong>subset</strong> of <span class="math inline">\(B\)</span> (<span class="math inline">\(A\subset B\)</span>). You can think about this as follows: If both coins show heads, then the first coin obviously did. This is obvious, but it helps us make a general observation. <em>Sometimes events will completely contain another.</em> If every outcome in event <span class="math inline">\(A\)</span> is also in event <span class="math inline">\(B\)</span>, we say that <em><span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(B\)</span></em> and write <span class="math inline">\(A\subset B\)</span>.</p>
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-subset.jpg" height = "200" width = "100" caption="Visualizing subsets ($\subset$)." %} -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/intro-to-prob-subset.jpg" class="img-fluid figure-img"></p>
@@ -267,7 +262,6 @@ A\cap C = \{HH \} \cap \{HT, TT \} = \varnothing,
 \]</span></p>
 <p>For this section, I’ll loosely follow <a href="https://archive.org/details/foundationsofthe00kolm/page/n7/mode/2up"><em>Foundations of the Theory of Probability</em> by A.N. Kolmogorov.</a></p>
 <p>In a way, we can think of a probability as a way of measuring an event. Much like how people have weights (in both pounds and kilograms), we can think about creating a type of rule or <em>measure</em> <span class="math inline">\(\Prob\)</span> which weights events and collections of events relative to all possible outcomes. If we’re able to find such a measure, we want it to follow a certain set of rules much like the case of the coin tossing example.</p>
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-measure.jpg" height = "200" width = "100" caption="Probability measures $\Prob$ take sets to probabilities." %} -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/intro-to-prob-measure.jpg" class="img-fluid figure-img"></p>
@@ -277,7 +271,6 @@ A\cap C = \{HH \} \cap \{HT, TT \} = \varnothing,
 <p>First up is a simple convention, we would like all probabilities that things happen to be <span class="math inline">\(1\)</span>. In the simplest case, an event <span class="math inline">\(E\)</span> can either surely occur so that <span class="math inline">\(\Prob(E) = 1\)</span> or it cannot <span class="math inline">\(\Prob(E) = 0\)</span>. Therefore, if we look at all possible outcomes simultaneously, we have <span class="math inline">\(\Prob(\Omega) = 1\)</span>.</p>
 <p>Since all probabilities are positive or zero, we also require that <span class="math inline">\(\Prob(E)\geq 0\)</span> for all events <span class="math inline">\(E\)</span>.</p>
 <p>Lastly, if two events cannot occur simultaneously i.e.&nbsp;<span class="math inline">\(A \cap B = \varnothing\)</span>, then <span class="math inline">\(\Prob(A \cup B) = \Prob(A) + \Prob(B).\)</span></p>
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-disjoint-sum.jpg" height = "200" width = "100" caption="Visualizing the disjoint summations." %} -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/intro-to-prob-disjoint-sum.jpg" class="img-fluid figure-img"></p>
@@ -297,7 +290,6 @@ A\cap C = \{HH \} \cap \{HT, TT \} = \varnothing,
 \Prob(A) \leq \Prob(B) \text{ if } A \subset B.
 \]</span></p>
 <p>This also makes sense if we return to the intuition of counting outcomes. If there are more possible outcomes in <span class="math inline">\(B\)</span>, then you expect that the chance <span class="math inline">\(B\)</span> occurs is greater than the chance that <span class="math inline">\(A\)</span> occurs as there are now more outcomes to choose from.</p>
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-subset-ineq.jpg" height = "200" width = "100" caption="Probability inequality for subsets." %} -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/intro-to-prob-subset-ineq.jpg" class="img-fluid figure-img"></p>
@@ -308,7 +300,6 @@ A\cap C = \{HH \} \cap \{HT, TT \} = \varnothing,
 <p><span class="math display">\[
 \Prob(A \cup B) = \Prob(A) + \Prob(B) - \Prob( A \cap B ).
 \]</span></p>
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-sum.jpg" height = "200" width = "100" caption="Visualizing the general summation formula." %} -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/intro-to-prob-sum.jpg" class="img-fluid figure-img"></p>
@@ -329,7 +320,6 @@ A\cap C = \{HH \} \cap \{HT, TT \} = \varnothing,
 \Prob(A\cap B) = \Prob(A) \cdot \Prob(B).
 \]</span></p>
 <p>This is equivalent to saying that <span class="math inline">\(\Prob(A \mid B) = \Prob(A)\)</span> and <span class="math inline">\(\Prob(B \mid A ) = \Prob(B)\)</span> which I leave to you as an exercise.</p>
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-conditional.jpg" height = "200" width = "100" caption="Conditional probability." %} -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/intro-to-prob-conditional.jpg" class="img-fluid figure-img"></p>
@@ -392,7 +382,6 @@ A\cap C = \{HH \} \cap \{HT, TT \} = \varnothing,
 <p><span class="math display">\[
 \Prob(V+ \mid G-) \approx 0.01 &gt;&gt;&gt; \Prob(V+) = 0.000001.
 \]</span></p>
-<!-- {% include figure image_path="/assets/images/intro-to-prob/intro-to-prob-bayes.jpg" height = "200" width = "100" caption="Illustrating Bayes' theorem." %} -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/intro-to-prob-bayes.jpg" class="img-fluid figure-img"></p>

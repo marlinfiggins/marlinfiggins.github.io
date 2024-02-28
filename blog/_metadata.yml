@@ -6,3 +6,6 @@ title-block-banner: true
 
 # Enable table of contents on blog posts
 toc: true
+render:
+  - "*.qmd"
+  - "!*.ipynb"
