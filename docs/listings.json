@@ -1,6 +1,12 @@
 [
   {
-    "listing": "/blog/blog.html",
+    "listing": "/talks.html",
+    "items": [
+      "/talks/FredHutchCareerExploration/FHCareerExploration.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
     "items": [
       "/blog/intro-to-probability/intro-to-prob.html",
       "/blog/social-distancing-and-me/2020-03-04-social-distancing-and-me.html",
@@ -9,7 +15,7 @@
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/blog/blog.html",
     "items": [
       "/blog/intro-to-probability/intro-to-prob.html",
       "/blog/social-distancing-and-me/2020-03-04-social-distancing-and-me.html",
@@ -25,12 +31,6 @@
       "/publications/ncov-orf8-ko/ncov-orf8-ko.html",
       "/publications/hct-omicron/hct-omicron.html",
       "/publications/rt-from-frequency-dynamics/rt-from-frequency-dynamics.html"
-    ]
-  },
-  {
-    "listing": "/talks.html",
-    "items": [
-      "/talks/FredHutchCareerExploration/FHCareerExploration.html"
     ]
   }
 ]

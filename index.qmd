@@ -15,9 +15,12 @@ about:
     - icon: github
       text: Github
       href: https://github.com/marlinfiggins
-    - icon: resume
+    - icon: envelope-paper
       text: Resume
       href: https://www.dropbox.com/scl/fi/ab9ya42zqd75rap60vbwn/Figgins_Resume.docx?rlkey=s7nb41vptnw4vhiy8bz0q9vt3&dl=0
+    - icon: mortarboard-fill
+      text: Google Scholar
+      href: https://scholar.google.com/citations?hl=en&user=6EIs9DEAAAAJ&view_op=list_works
 listing:
   - id: blog-posts
     contents: "blog/*/*.qmd"
