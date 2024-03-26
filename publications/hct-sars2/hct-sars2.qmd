@@ -1,0 +1,11 @@
+---
+title: "SARS-CoV-2 diversity and transmission on a university campus across two academic years during the pandemic"
+author: "Amanda M Casto, Miguel I Paredes, Julia Catherine Bennett, Kyle G Luiten, Jessica A O'Hanlon, Peter D Han, Luis Gamboa, Evan McDermot, Melissa Truong, Geoffrey S Gottlieb, Zack Acker, Caitlin R Wolf, Ariana Magedson, Natalie K Lo, Devon McDonald, Tessa C Wright, Kathryn McCaffrey, Marlin D Figgins, Janet A Englund, Michael Boeckh, Christina M Lockwood, Deborah A Nickerson, Jay Shendure, Timothy M Uyeki, Lea M Starita, Trevor Bedford, Helen Y Chu, Ana A Weil"
+doi: "https://doi.org/10.1101/2024.02.29.24303285"
+short_cite: "Weil et al. 2024. medRxiv."
+date: "2024-02-29"
+---
+
+## Abstract
+ 
+Institutions of higher education (IHEs) have been a focus of SARS-CoV-2 transmission studies but there is limited information on how viral diversity and transmission at IHEs changed as the pandemic progressed. Here we analyze 3606 viral genomes from unique COVID-19 episodes collected at a public university in Seattle, Washington (WA) from September 2020 to September 2022. Across the study period, we found evidence of frequent viral transmission among university affiliates with 60% (n=2153) of viral genomes from campus specimens genetically identical to at least one other campus specimen. Moreover, viruses from students were observed in transmission clusters at a higher frequency than in the overall dataset while viruses from symptomatic infections were observed in transmission clusters at a lower frequency. Though only a small percentage of community viruses were identified as possible descendants of viruses isolated in university study specimens, phylodynamic modelling suggested a high rate of transmission events from campus into the local community, particularly during the 2021-2022 academic year. We conclude that viral transmission was common within the university population throughout the study period but that not all university affiliates were equally likely to be involved. In addition, the transmission rate from campus into the surrounding community may have increased during the second year of the study, possibly due to return to in-person instruction.

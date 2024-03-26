@@ -6,7 +6,7 @@
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/blog/blog.html",
     "items": [
       "/blog/intro-to-probability/intro-to-prob.html",
       "/blog/social-distancing-and-me/2020-03-04-social-distancing-and-me.html",
@@ -15,7 +15,7 @@
     ]
   },
   {
-    "listing": "/blog/blog.html",
+    "listing": "/index.html",
     "items": [
       "/blog/intro-to-probability/intro-to-prob.html",
       "/blog/social-distancing-and-me/2020-03-04-social-distancing-and-me.html",
@@ -26,8 +26,9 @@
   {
     "listing": "/publications/publications.html",
     "items": [
-      "/publications/ncov-forecasting-fit/ncov-forecasting-fit.html",
+      "/publications/hct-sars2/hct-sars2.html",
       "/publications/mpox-dynamics/mpox-dynamics.html",
+      "/publications/ncov-forecasting-fit/ncov-forecasting-fit.html",
       "/publications/ncov-orf8-ko/ncov-orf8-ko.html",
       "/publications/hct-omicron/hct-omicron.html",
       "/publications/rt-from-frequency-dynamics/rt-from-frequency-dynamics.html"

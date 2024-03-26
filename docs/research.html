@@ -108,9 +108,35 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#epidemic-evolutionary-dynamics" id="toc-epidemic-evolutionary-dynamics" class="nav-link active" data-scroll-target="#epidemic-evolutionary-dynamics">Epidemic-Evolutionary dynamics</a>
+  <ul class="collapse">
+  <li><a href="#epidemic-and-evolutionary-dynamics-can-occur-on-similar-time-scales" id="toc-epidemic-and-evolutionary-dynamics-can-occur-on-similar-time-scales" class="nav-link" data-scroll-target="#epidemic-and-evolutionary-dynamics-can-occur-on-similar-time-scales">Epidemic and evolutionary dynamics can occur on similar time scales</a></li>
+  <li><a href="#inferring-variant-specific-growth-rates-and-advantages" id="toc-inferring-variant-specific-growth-rates-and-advantages" class="nav-link" data-scroll-target="#inferring-variant-specific-growth-rates-and-advantages">Inferring variant-specific growth rates and advantages</a></li>
+  </ul></li>
+  <li><a href="#improving-evolutionary-forecasts" id="toc-improving-evolutionary-forecasts" class="nav-link" data-scroll-target="#improving-evolutionary-forecasts">Improving evolutionary forecasts</a>
+  <ul class="collapse">
+  <li><a href="#forecasting-evolution-can-be-useful-for-improving-vaccination" id="toc-forecasting-evolution-can-be-useful-for-improving-vaccination" class="nav-link" data-scroll-target="#forecasting-evolution-can-be-useful-for-improving-vaccination">Forecasting evolution can be useful for improving vaccination</a></li>
+  <li><a href="#robust-evaluation-of-frequency-forecasts" id="toc-robust-evaluation-of-frequency-forecasts" class="nav-link" data-scroll-target="#robust-evaluation-of-frequency-forecasts">Robust evaluation of frequency forecasts</a></li>
+  </ul></li>
+  <li><a href="#tool-building-enables-others-to-learn-and-contribute" id="toc-tool-building-enables-others-to-learn-and-contribute" class="nav-link" data-scroll-target="#tool-building-enables-others-to-learn-and-contribute">Tool-building enables others to learn and contribute</a>
+  <ul class="collapse">
+  <li><a href="#automated-sars-cov-2-forecasts" id="toc-automated-sars-cov-2-forecasts" class="nav-link" data-scroll-target="#automated-sars-cov-2-forecasts">Automated SARS-CoV-2 Forecasts</a></li>
+  </ul></li>
+  <li><a href="#tools-for-evolutionary-forecasts-of-variants" id="toc-tools-for-evolutionary-forecasts-of-variants" class="nav-link" data-scroll-target="#tools-for-evolutionary-forecasts-of-variants">Tools for evolutionary forecasts of variants</a>
+  <ul class="collapse">
+  <li><a href="#building-tools-to-make-science-more-accessible-and-collaborative" id="toc-building-tools-to-make-science-more-accessible-and-collaborative" class="nav-link" data-scroll-target="#building-tools-to-make-science-more-accessible-and-collaborative">Building tools to make science more accessible and collaborative</a></li>
+  <li><a href="#science-communication-and-education-comes-with-the-territory" id="toc-science-communication-and-education-comes-with-the-territory" class="nav-link" data-scroll-target="#science-communication-and-education-comes-with-the-territory">Science communication and education comes with the territory</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -119,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -136,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="epidemic-and-evolutionary-dynamics-can-occur-on-similar-time-scales" class="level3">
 <h3 class="anchored" data-anchor-id="epidemic-and-evolutionary-dynamics-can-occur-on-similar-time-scales">Epidemic and evolutionary dynamics can occur on similar time scales</h3>
 <p>Population dynamics and evolution can occur on similar time scales when mutation occurs rapidly along replication. The case of transmission of infectious diseases is an especially interesting example of this.</p>
-<p>As infected individuals transmit to one another, pathogens can accumulate mutations which can change the potential for escape from immune responses, increased transmissibility, and/or can lead to differential fitness for different genetic variants.</p>
+<p>As infected individuals transmit to one another, pathogens can accumulate mutations which can change the potential for escape from immune responses or increased transmissibility and can lead to differential fitness for different genetic variants.</p>
 <div class="{.fig-align=&quot;center&quot;}">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -150,7 +176,13 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="inferring-variant-specific-growth-rates-and-advantages" class="level3">
 <h3 class="anchored" data-anchor-id="inferring-variant-specific-growth-rates-and-advantages">Inferring variant-specific growth rates and advantages</h3>
-<p>In order to quantify the fitness of genetic variants at transmission, we (<a href="publications/rt-from-frequency-dynamics/rt-from-frequency-dynamics.html">Figgins and Bedford 2022</a>) developed a method from learning effective reproduction numbers and variant relative growth advantages using sequence and case count data. We apply this method to several US states to learn about the growth advantages for SARS-CoV-2 variants of concern.</p>
+<p>In order to quantify the fitness of genetic variants at transmission, I developed a method from learning effective reproduction numbers and variant relative growth advantages using sequence and case count data.(<a href="publications/rt-from-frequency-dynamics/rt-from-frequency-dynamics.html">Figgins and Bedford 2022</a>). We apply this method to several US states to learn about the growth advantages for SARS-CoV-2 variants of concern.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/research_images/posterior_variants_Rt.png" class="img-fluid figure-img"></p>
+<figcaption>Estimating variant-specific effective reproductive numbers from case and sequence data.</figcaption>
+</figure>
+</div>
 </section>
 </section>
 <section id="improving-evolutionary-forecasts" class="level2">
@@ -158,13 +190,35 @@ ul.task-list li input[type="checkbox"] {
 <section id="forecasting-evolution-can-be-useful-for-improving-vaccination" class="level3">
 <h3 class="anchored" data-anchor-id="forecasting-evolution-can-be-useful-for-improving-vaccination">Forecasting evolution can be useful for improving vaccination</h3>
 <p>As viruses mutate, vaccine effectiveness can wane due to immune mismatch between circulating virus strains and strains used in vaccines. For viruses like SARS-CoV-2 and influenza understanding how viruses differ in their fitness can help us to better forecast their evolution. This allows us better understand the process of evolution itself, but also has practical applications in improving vaccines.</p>
-<p>Currently, I am interested in tying in mechanistic models of transmission, immunity, and recovery to improve methods for evolutionary forecasting. The hope is that by including more information about these processes, we can gain better estimates of relative fitness and better forecasts for virus populations.</p>
+<p>Currently, I am tying in mechanistic models of transmission, immunity, and recovery to improve methods for evolutionary forecasting. Including more information about these processes allows us to get better estimates of relative fitness and better forecasts for virus populations.</p>
+</section>
+<section id="robust-evaluation-of-frequency-forecasts" class="level3">
+<h3 class="anchored" data-anchor-id="robust-evaluation-of-frequency-forecasts">Robust evaluation of frequency forecasts</h3>
+<p>Additionally, we develop methods for evaluating models for the purpose of evolutionary forecasts.</p>
+<p>We’ve developed pipelines for data curation, model evaluation and comparison to see how various forecast models compare on short-term forecasts to recreate and analyze the difficulties in real-time evolutionary forecasting. Through this work, we analyzed how the data collection process might affect our ability to forecast in the short and medium-term. (<a href="./publications/ncov-forecasting-fit/ncov-forecasting-fit.html">Figgins, Abousamra, and Bedford. 2023.</a>)</p>
 </section>
 </section>
 <section id="tool-building-enables-others-to-learn-and-contribute" class="level2">
 <h2 class="anchored" data-anchor-id="tool-building-enables-others-to-learn-and-contribute">Tool-building enables others to learn and contribute</h2>
-<section id="we-build-tools-to-make-science-more-accessible-and-collaborative" class="level3">
-<h3 class="anchored" data-anchor-id="we-build-tools-to-make-science-more-accessible-and-collaborative">We build tools to make science more accessible and collaborative</h3>
+<section id="automated-sars-cov-2-forecasts" class="level3">
+<h3 class="anchored" data-anchor-id="automated-sars-cov-2-forecasts">Automated SARS-CoV-2 Forecasts</h3>
+<p>With the team at Nextstrain, we’ve developed an open source public dashboard of interactive SARS-CoV-2 variant frequencies and forecasts globally: <a href="https://nextstrain.org/sars-cov-2/forecasts/">Nextstrain Forecasts</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/research_images/nextstrain_forecasts.jpg" class="img-fluid figure-img"></p>
+<figcaption>Static image of Nextstrain Forecasts. <a href="https://nextstrain.org/sars-cov-2/forecasts/">Link to current dashboard.</a></figcaption>
+</figure>
+</div>
+<p>Our work is fully open source, and our results are publicly available and updated daily as new data comes in. We’ve collaborated with data providers worldwide and have developed robust methodologies for forecasting SARS-CoV-2 variant dynamics.</p>
+</section>
+</section>
+<section id="tools-for-evolutionary-forecasts-of-variants" class="level2">
+<h2 class="anchored" data-anchor-id="tools-for-evolutionary-forecasts-of-variants">Tools for evolutionary forecasts of variants</h2>
+<p>I’ve also spearheaded the development of a Python package called <a href="https://github.com/blab/evofr">evofr</a>. Evofr is a production-level library specializing in implementing Bayesian models for evolutionary forecasting. Evofr is designed to provide a simple interface for quick model development and scalable inference on large genomic data sets (&gt; 2 million sequences) and time series while emphasizing ease of use and adoption by public health officials globally.</p>
+<p>By design, evofr is modular allowing users to mix data types, models, and inference methods, allowing for backends in numpyro, pymc, custom posterior densities as well as variational inference, maximum likelihood estimation, and full Bayesian inference via MCMC.</p>
+<p>Evofr has found use is several projects in the lab such as Nextstrain Forecasts and several academic projects including <a href="./publications/mpox-dynamics/mpox-dynamics.html">Paredes et al.&nbsp;Cell, 2024.</a>, <a href="./publications/ncov-forecasting-fit/ncov-forecasting-fit.html">Figgins, Abousamra, and Bedford. 2023.</a>, <a href="./publications/hct-omicron/hct-omicron.html">Weil et al.&nbsp;2022</a>, and <a href="./publications/hct-sars2/hct-sars2.html">Weil et al.&nbsp;2024</a>.</p>
+<section id="building-tools-to-make-science-more-accessible-and-collaborative" class="level3">
+<h3 class="anchored" data-anchor-id="building-tools-to-make-science-more-accessible-and-collaborative">Building tools to make science more accessible and collaborative</h3>
 <p>In general, I am motivated by the desire to build tools to help folks answer questions they have about epidemics and how pathogens evolve. For this purpose, much of my time is dedicated to making sure the models and methods I develop are available freely and well documented, so that others can learn about them and make their own contributions to science.</p>
 </section>
 <section id="science-communication-and-education-comes-with-the-territory" class="level3">
