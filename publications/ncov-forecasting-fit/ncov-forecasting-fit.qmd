@@ -1,10 +1,12 @@
 ---
 title: "Fitness models provide accurate short-term forecasts of SARS-CoV-2 variant frequency"
-author: "Eslam Abousamra, Marlin Figgins, Trevor Bedford"
+author: "Marlin Figgins$*$, Eslam Abousamra$*$, Trevor Bedford"
 doi: "https://doi.org/10.1101/2023.11.30.23299240 "
-short_cite: "Abousamra, Figgins, and Bedford. 2023. medRxiv."
+short_cite: "Figgins, Abousamra, and Bedford. 2023. medRxiv."
 date: "2023-12-01"
 ---
+
+*: Co-First Author
 
 ## Abstract
 
