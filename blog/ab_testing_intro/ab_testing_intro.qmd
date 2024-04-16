@@ -1,7 +1,7 @@
 ---
 layout: posts
 types: posts
-title: "Introduction to Bayesian A/B testing"
+title: "Simple Bayesian A/B testing"
 execute: 
   eval: false
 categories:
@@ -17,22 +17,22 @@ Oftentimes, we want to develop some notion of how and why one alternative may be
 In the absence of data, we can design and run tests on these alternatives to better understand them. 
 
 In the arena of business decision-making, we often have some metric of interest.
-This may be the click through rate on an ad, the color of a button, article headlines, or comparing coupon-types. 
+This may be the click-through rate on an ad, the color of a button, article headlines, or comparing coupon-types. 
 These examples all fall into the larger bucket of \emph{A/B testing}.
 
 Today, we'll focus on a pretty fun synthetic example to illustrate how we might begin to A/B test.
 
-Let's suppose that we're a rollerskate retailer who is testing out two ad variants in anticipation for the inevitable global resurgence of roller skating.
+Let's suppose that we're a rollerskating retailer who is testing out two ad variants in anticipation for the inevitable global resurgence of roller skating.
 
 We have two ad variants prepared. 
-The first ad variant (Winter Wonderland) features Mariah Carey in a parka rollerskating in a snowglobe.
+The first ad variant (Winter Wonderland) features Mariah Carey in a parka rollerskating in a snow globe.
 The second ad variant (Summer Renaissance) features Beyonce rollerskating beachside on a sunny day.
 
 ## Collecting data
 
 We want to collect some data here to see how each of the ads perform, so we run a test where we try out each ad variant on customers over some period of time.
 
-Before customers are shown an ad, we randomize which ad variant they are shown and keep track of both how many times the ad is shown (`impressions`) and how many times it is clicked (`clicks`). This is to ensure that we're getting a good sample of each ad across all potential customers which may differ in their underlying click through rates.
+Before customers are shown an ad, we randomize which ad variant they are shown and keep track of both how many times the ad is shown (`impressions`) and how many times it is clicked (`clicks`). This is to ensure that we're getting a good sample of each ad across all potential customers which may differ in their underlying click-through rates.
 
 After this process, we may get data that looks something like this.
 
@@ -41,19 +41,19 @@ After this process, we may get data that looks something like this.
 | 2      | 120   |    WW |
 | 3     | 143  |   SR |
 
-We now need to analyze this data to get some idea of the \emph{click through rate}.
+We now need to analyze this data to get some idea of the \emph{click-through rate}.
 
-## Estimating click through rate
+## Estimating click-through rate
 
-The variable of interest here is the click through rate. We want to pick the ad variant which maximizes the click through rate. 
+The variable of interest here is the click-through rate. We want to pick the ad variant which maximizes the click-through rate. 
 
-We can estimate the click through rate by treating the number of clicks as a binary observation with some probability, so that we have
+We can estimate the click-through rate by treating the number of clicks as a binary observation with some probability, so that we have
 
 $$
 \text{clicks} \sim \text{Binomial}(\text{total}, p),
 $$
 
- where $p$ is our click-through rate i.e. the probability that an user clicks on the ad they're shown.
+where $p$ is our click-through rate i.e. the probability that an user clicks on the ad they're shown.
 
 If we also have some prior expectation of the CTR, we can combine this with the likelihood to create a Bayesian model.
 
@@ -63,29 +63,29 @@ $$
 \text{CTR} \sim \text{Beta}(\alpha, \beta).
 $$
 
-This particular combination of prior and likelihood allows to compute the posterior distribution of the CTR analytically:
+This particular combination of prior and likelihood allows us to compute the posterior distribution of the CTR analytically:
 
 $$
 \text{CTR} \sim \text{Beta}(\alpha + \text{counts}, \beta + \text{totals} - \text{counts}).
 $$
 
-This is an example of conjugate priors which you can read more about [here](https://en.wikipedia.org/wiki/Conjugate_prior).
-Typically, $\alpha = \beta = 1$ is used for the prior here and acts a weak uniform prior on the click through rate.
+This is an example of **conjugate priors** which you can read more about [here](https://en.wikipedia.org/wiki/Conjugate_prior).
+Typically, $\alpha = \beta = 1$ is used for the prior here and acts a weak uniform prior on the click-through rate.
 
-![Prior and posterior estimates of click through rate from above model.](./figures/prior-posterior.png)
+![Prior and posterior estimates of click-through rate from above model.](./figures/prior-posterior.png)
 
 However, the choice of prior does matter here.
 The choice of prior can bias or [regularize](https://en.wikipedia.org/wiki/Regularization_(mathematics)) your results towards particular values.
 This is useful when you have a strong idea or prior expectation for the values of your parameters.
-For example, if prior experiments tell you that your click through rate is between 0.01 and 0.23, it might be useful to encode this as prior information.
+For example, if prior experiments tell you that your click-through rate is between 0.01 and 0.23, it might be useful to encode this as prior information.
 
 ![Changing prior affects the computed posterior distribution.](./figures/changing-prior-posterior.png)
 
 ## Which is better? 
 
-We've shown that we can use this model to estimate the click through rate, but this doesn't answer the question we actually care about i.e. **"Which one should we choose?"**
+We've shown that we can use this model to estimate the click-through rate, but this doesn't answer the question we actually care about i.e. **"Which one should we choose?"**
 
-We can begin by sampling the difference between the clickthrough rates of the alternatives.
+We can begin by sampling the difference between the click-through rates of the alternatives.
 This is called the **lift**.
 
 $$
@@ -125,7 +125,7 @@ where we've computed the loss for each posterior sample $s$.
 ![Loss computed among alternatives.](./figures/posterior-loss.png)
 
 Now that we understand how much we can expect to lose by selecting an option, we have to decide when it is it worth it to switch.
-For example, if we only stand to make $2 from the change, it probably isn't worth because the alternatives may be practically equivalent.
+For example, if we only stand to make \$2 from the change, it probably isn't worth because the alternatives may be practically equivalent.
 This is where the idea of the **threshold of caring** comes in.
 The threshold of caring determines the level of expected loss below which you consider alternatives practically indistinguishable.
 This also has the effect of being a check on the acceptability of an outcome since alternatives below this threshold are the best alternatives given that threshold.
@@ -136,7 +136,7 @@ In practice, the threshold of caring can be determined by considering the practi
 Since the expected loss of Summer Renaissance is below the threshold of caring, we can say that Summer Renaissance is an acceptable outcome and choose that as our final outcome.
 If there were multiple acceptable outcomes, we could simply take the one with the lowest expected loss.
 
-## Simple implementation in Python
+## Implementation in Python
 
 We can wrap all these ideas into a simple class that runs this rate experiment:
 
@@ -252,3 +252,11 @@ With this class running an experiment becomes as simple as loading our data and 
 experiment = SimpleRateExperiment(counts="clicks", totals="impressions", group="variation")
 experiment.run_test(data, thres_caring=0.01)
 ```
+
+### Conclusion
+
+This post is an introduction to some of the ideas behind A/B testing in a Bayesian framework.
+There are several common pitfalls that are discussed when it comes to A/B testing such as the effects of peeking which we do not discuss here.
+Today, I'm focusing on applying the ideas of Bayesian decision theory to the simplest type of Bayesian A/B test where we have nice likelihood which allow us to take advantage of conjugate priors.
+I plan to discuss extensions to this method in the future including real-time allocation of variations with multi-armed bandits.
+For now, I hope you have enjoyed this post and I look forward to writing more on this topic in the future.

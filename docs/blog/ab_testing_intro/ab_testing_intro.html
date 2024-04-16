@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2024-04-12">
 
-<title>Marlin Figgins - Introduction to Bayesian A/B testing</title>
+<title>Marlin Figgins - Simple Bayesian A/B testing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -172,7 +172,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Introduction to Bayesian A/B testing</h1>
+      <h1 class="title">Simple Bayesian A/B testing</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Stats</div>
               </div>
@@ -204,12 +204,15 @@ window.Quarto = {
   <ul>
   <li><a href="#ab-testing" id="toc-ab-testing" class="nav-link active" data-scroll-target="#ab-testing">A/B testing</a></li>
   <li><a href="#collecting-data" id="toc-collecting-data" class="nav-link" data-scroll-target="#collecting-data">Collecting data</a></li>
-  <li><a href="#estimating-click-through-rate" id="toc-estimating-click-through-rate" class="nav-link" data-scroll-target="#estimating-click-through-rate">Estimating click through rate</a></li>
+  <li><a href="#estimating-click-through-rate" id="toc-estimating-click-through-rate" class="nav-link" data-scroll-target="#estimating-click-through-rate">Estimating click-through rate</a></li>
   <li><a href="#which-is-better" id="toc-which-is-better" class="nav-link" data-scroll-target="#which-is-better">Which is better?</a>
   <ul class="collapse">
   <li><a href="#decision-theory-and-expected-loss" id="toc-decision-theory-and-expected-loss" class="nav-link" data-scroll-target="#decision-theory-and-expected-loss">Decision theory and expected loss</a></li>
   </ul></li>
-  <li><a href="#simple-implementation-in-python" id="toc-simple-implementation-in-python" class="nav-link" data-scroll-target="#simple-implementation-in-python">Simple implementation in Python</a></li>
+  <li><a href="#implementation-in-python" id="toc-implementation-in-python" class="nav-link" data-scroll-target="#implementation-in-python">Implementation in Python</a>
+  <ul class="collapse">
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -223,15 +226,15 @@ window.Quarto = {
 <section id="ab-testing" class="level2">
 <h2 class="anchored" data-anchor-id="ab-testing">A/B testing</h2>
 <p>Choosing between alternatives is a fairly common task in daily life. Oftentimes, we want to develop some notion of how and why one alternative may be better than another. In the absence of data, we can design and run tests on these alternatives to better understand them.</p>
-<p>In the arena of business decision-making, we often have some metric of interest. This may be the click through rate on an ad, the color of a button, article headlines, or comparing coupon-types. These examples all fall into the larger bucket of .</p>
+<p>In the arena of business decision-making, we often have some metric of interest. This may be the click-through rate on an ad, the color of a button, article headlines, or comparing coupon-types. These examples all fall into the larger bucket of .</p>
 <p>Today, we’ll focus on a pretty fun synthetic example to illustrate how we might begin to A/B test.</p>
-<p>Let’s suppose that we’re a rollerskate retailer who is testing out two ad variants in anticipation for the inevitable global resurgence of roller skating.</p>
-<p>We have two ad variants prepared. The first ad variant (Winter Wonderland) features Mariah Carey in a parka rollerskating in a snowglobe. The second ad variant (Summer Renaissance) features Beyonce rollerskating beachside on a sunny day.</p>
+<p>Let’s suppose that we’re a rollerskating retailer who is testing out two ad variants in anticipation for the inevitable global resurgence of roller skating.</p>
+<p>We have two ad variants prepared. The first ad variant (Winter Wonderland) features Mariah Carey in a parka rollerskating in a snow globe. The second ad variant (Summer Renaissance) features Beyonce rollerskating beachside on a sunny day.</p>
 </section>
 <section id="collecting-data" class="level2">
 <h2 class="anchored" data-anchor-id="collecting-data">Collecting data</h2>
 <p>We want to collect some data here to see how each of the ads perform, so we run a test where we try out each ad variant on customers over some period of time.</p>
-<p>Before customers are shown an ad, we randomize which ad variant they are shown and keep track of both how many times the ad is shown (<code>impressions</code>) and how many times it is clicked (<code>clicks</code>). This is to ensure that we’re getting a good sample of each ad across all potential customers which may differ in their underlying click through rates.</p>
+<p>Before customers are shown an ad, we randomize which ad variant they are shown and keep track of both how many times the ad is shown (<code>impressions</code>) and how many times it is clicked (<code>clicks</code>). This is to ensure that we’re getting a good sample of each ad across all potential customers which may differ in their underlying click-through rates.</p>
 <p>After this process, we may get data that looks something like this.</p>
 <table class="table">
 <thead>
@@ -257,9 +260,9 @@ window.Quarto = {
 <p>We now need to analyze this data to get some idea of the .</p>
 </section>
 <section id="estimating-click-through-rate" class="level2">
-<h2 class="anchored" data-anchor-id="estimating-click-through-rate">Estimating click through rate</h2>
-<p>The variable of interest here is the click through rate. We want to pick the ad variant which maximizes the click through rate.</p>
-<p>We can estimate the click through rate by treating the number of clicks as a binary observation with some probability, so that we have</p>
+<h2 class="anchored" data-anchor-id="estimating-click-through-rate">Estimating click-through rate</h2>
+<p>The variable of interest here is the click-through rate. We want to pick the ad variant which maximizes the click-through rate.</p>
+<p>We can estimate the click-through rate by treating the number of clicks as a binary observation with some probability, so that we have</p>
 <p><span class="math display">\[
 \text{clicks} \sim \text{Binomial}(\text{total}, p),
 \]</span></p>
@@ -269,18 +272,18 @@ window.Quarto = {
 <p><span class="math display">\[
 \text{CTR} \sim \text{Beta}(\alpha, \beta).
 \]</span></p>
-<p>This particular combination of prior and likelihood allows to compute the posterior distribution of the CTR analytically:</p>
+<p>This particular combination of prior and likelihood allows us to compute the posterior distribution of the CTR analytically:</p>
 <p><span class="math display">\[
 \text{CTR} \sim \text{Beta}(\alpha + \text{counts}, \beta + \text{totals} - \text{counts}).
 \]</span></p>
-<p>This is an example of conjugate priors which you can read more about <a href="https://en.wikipedia.org/wiki/Conjugate_prior">here</a>. Typically, <span class="math inline">\(\alpha = \beta = 1\)</span> is used for the prior here and acts a weak uniform prior on the click through rate.</p>
+<p>This is an example of <strong>conjugate priors</strong> which you can read more about <a href="https://en.wikipedia.org/wiki/Conjugate_prior">here</a>. Typically, <span class="math inline">\(\alpha = \beta = 1\)</span> is used for the prior here and acts a weak uniform prior on the click-through rate.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./figures/prior-posterior.png" class="img-fluid figure-img"></p>
-<figcaption>Prior and posterior estimates of click through rate from above model.</figcaption>
+<figcaption>Prior and posterior estimates of click-through rate from above model.</figcaption>
 </figure>
 </div>
-<p>However, the choice of prior does matter here. The choice of prior can bias or <a href="https://en.wikipedia.org/wiki/Regularization_(mathematics)">regularize</a> your results towards particular values. This is useful when you have a strong idea or prior expectation for the values of your parameters. For example, if prior experiments tell you that your click through rate is between 0.01 and 0.23, it might be useful to encode this as prior information.</p>
+<p>However, the choice of prior does matter here. The choice of prior can bias or <a href="https://en.wikipedia.org/wiki/Regularization_(mathematics)">regularize</a> your results towards particular values. This is useful when you have a strong idea or prior expectation for the values of your parameters. For example, if prior experiments tell you that your click-through rate is between 0.01 and 0.23, it might be useful to encode this as prior information.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./figures/changing-prior-posterior.png" class="img-fluid figure-img"></p>
@@ -290,8 +293,8 @@ window.Quarto = {
 </section>
 <section id="which-is-better" class="level2">
 <h2 class="anchored" data-anchor-id="which-is-better">Which is better?</h2>
-<p>We’ve shown that we can use this model to estimate the click through rate, but this doesn’t answer the question we actually care about i.e.&nbsp;<strong>“Which one should we choose?”</strong></p>
-<p>We can begin by sampling the difference between the clickthrough rates of the alternatives. This is called the <strong>lift</strong>.</p>
+<p>We’ve shown that we can use this model to estimate the click-through rate, but this doesn’t answer the question we actually care about i.e.&nbsp;<strong>“Which one should we choose?”</strong></p>
+<p>We can begin by sampling the difference between the click-through rates of the alternatives. This is called the <strong>lift</strong>.</p>
 <p><span class="math display">\[
 \text{lift}_{\text{SR}, \text{WW}} = \text{CTR}_{\text{SR}} - \text{CTR}_{\text{WW}}.
 \]</span></p>
@@ -335,10 +338,10 @@ window.Quarto = {
 <p>Since the expected loss of Summer Renaissance is below the threshold of caring, we can say that Summer Renaissance is an acceptable outcome and choose that as our final outcome. If there were multiple acceptable outcomes, we could simply take the one with the lowest expected loss.</p>
 </section>
 </section>
-<section id="simple-implementation-in-python" class="level2">
-<h2 class="anchored" data-anchor-id="simple-implementation-in-python">Simple implementation in Python</h2>
+<section id="implementation-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="implementation-in-python">Implementation in Python</h2>
 <p>We can wrap all these ideas into a simple class that runs this rate experiment:</p>
-<div id="1405dc8f" class="cell" data-execution_count="1">
+<div id="0787ca51" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> beta, beta_gen</span>
@@ -443,12 +446,16 @@ window.Quarto = {
 </details>
 </div>
 <p>With this class running an experiment becomes as simple as loading our data and using the <code>run_test</code> method:</p>
-<div id="4c9069d2" class="cell" data-execution_count="2">
+<div id="448e888e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>experiment <span class="op">=</span> SimpleRateExperiment(counts<span class="op">=</span><span class="st">"clicks"</span>, totals<span class="op">=</span><span class="st">"impressions"</span>, group<span class="op">=</span><span class="st">"variation"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>experiment.run_test(data, thres_caring<span class="op">=</span><span class="fl">0.01</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>This post is an introduction to some of the ideas behind A/B testing in a Bayesian framework. There are several common pitfalls that are discussed when it comes to A/B testing such as the effects of peeking which we do not discuss here. Today, I’m focusing on applying the ideas of Bayesian decision theory to the simplest type of Bayesian A/B test where we have nice likelihood which allow us to take advantage of conjugate priors. I plan to discuss extensions to this method in the future including real-time allocation of variations with multi-armed bandits. For now, I hope you have enjoyed this post and I look forward to writing more on this topic in the future.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
