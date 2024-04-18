@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-04-12">
+<meta name="dcterms.date" content="2024-04-15">
 
 <title>Marlin Figgins - Simple Bayesian A/B testing</title>
 <style>
@@ -186,7 +186,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 12, 2024</p>
+        <p class="date">April 15, 2024</p>
       </div>
     </div>
     
@@ -262,13 +262,13 @@ window.Quarto = {
 <section id="estimating-click-through-rate" class="level2">
 <h2 class="anchored" data-anchor-id="estimating-click-through-rate">Estimating click-through rate</h2>
 <p>The variable of interest here is the click-through rate. We want to pick the ad variant which maximizes the click-through rate.</p>
-<p>We can estimate the click-through rate by treating the number of clicks as a binary observation with some probability, so that we have</p>
+<p>We can estimate the click-through rate by treating the number of clicks as a binomial distribution. We can think of this as the number of clicks assuming that each time the is shown it is clicked with some probability, so that we have</p>
 <p><span class="math display">\[
 \text{clicks} \sim \text{Binomial}(\text{total}, p),
 \]</span></p>
-<p>where <span class="math inline">\(p\)</span> is our click-through rate i.e.&nbsp;the probability that an user clicks on the ad they’re shown.</p>
+<p>where <span class="math inline">\(p\)</span> is our click-through rate i.e.&nbsp;the probability that a user clicks on the ad they’re shown.</p>
 <p>If we also have some prior expectation of the CTR, we can combine this with the likelihood to create a Bayesian model.</p>
-<p>Since the CTR is between 0 and 1, we can choose a beta distribution as the prior.</p>
+<p>Since the CTR is between 0 and 1, we can choose a <a href="https://en.wikipedia.org/wiki/Beta_distribution">beta distribution</a> as the prior.</p>
 <p><span class="math display">\[
 \text{CTR} \sim \text{Beta}(\alpha, \beta).
 \]</span></p>
@@ -341,7 +341,7 @@ window.Quarto = {
 <section id="implementation-in-python" class="level2">
 <h2 class="anchored" data-anchor-id="implementation-in-python">Implementation in Python</h2>
 <p>We can wrap all these ideas into a simple class that runs this rate experiment:</p>
-<div id="0787ca51" class="cell" data-execution_count="1">
+<div id="45061108" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> beta, beta_gen</span>
@@ -446,7 +446,7 @@ window.Quarto = {
 </details>
 </div>
 <p>With this class running an experiment becomes as simple as loading our data and using the <code>run_test</code> method:</p>
-<div id="448e888e" class="cell" data-execution_count="2">
+<div id="865123e9" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>experiment <span class="op">=</span> SimpleRateExperiment(counts<span class="op">=</span><span class="st">"clicks"</span>, totals<span class="op">=</span><span class="st">"impressions"</span>, group<span class="op">=</span><span class="st">"variation"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>experiment.run_test(data, thres_caring<span class="op">=</span><span class="fl">0.01</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
