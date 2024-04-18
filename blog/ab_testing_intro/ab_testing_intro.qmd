@@ -7,7 +7,7 @@ execute:
 categories:
   - Stats
 image: "./figures/posterior-lift.png"
-date: "2024-04-12"
+date: "2024-04-15"
 ---
 
 ## A/B testing
@@ -47,17 +47,18 @@ We now need to analyze this data to get some idea of the \emph{click-through rat
 
 The variable of interest here is the click-through rate. We want to pick the ad variant which maximizes the click-through rate. 
 
-We can estimate the click-through rate by treating the number of clicks as a binary observation with some probability, so that we have
+We can estimate the click-through rate by treating the number of clicks as a binomial distribution.
+We can think of this as the number of clicks assuming that each time the is shown it is clicked with some probability, so that we have
 
 $$
 \text{clicks} \sim \text{Binomial}(\text{total}, p),
 $$
 
-where $p$ is our click-through rate i.e. the probability that an user clicks on the ad they're shown.
+where $p$ is our click-through rate i.e. the probability that a user clicks on the ad they're shown.
 
 If we also have some prior expectation of the CTR, we can combine this with the likelihood to create a Bayesian model.
 
-Since the CTR is between 0 and 1, we can choose a beta distribution as the prior.
+Since the CTR is between 0 and 1, we can choose a [beta distribution](https://en.wikipedia.org/wiki/Beta_distribution) as the prior.
 
 $$
 \text{CTR} \sim \text{Beta}(\alpha, \beta).
