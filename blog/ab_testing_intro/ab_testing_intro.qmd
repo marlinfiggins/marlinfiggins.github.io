@@ -48,7 +48,7 @@ We now need to analyze this data to get some idea of the \emph{click-through rat
 The variable of interest here is the click-through rate. We want to pick the ad variant which maximizes the click-through rate. 
 
 We can estimate the click-through rate by treating the number of clicks as a binomial distribution.
-We can think of this as the number of clicks assuming that each time the is shown it is clicked with some probability, so that we have
+We can think of this as the number of clicks assuming that each time the ad is shown it is clicked with some probability, so that we have
 
 $$
 \text{clicks} \sim \text{Binomial}(\text{total}, p),
