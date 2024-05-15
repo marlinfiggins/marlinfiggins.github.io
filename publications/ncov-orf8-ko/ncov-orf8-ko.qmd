@@ -1,9 +1,9 @@
 ---
 title: "Positive selection underlies repeated knockout of ORF8 in SARS-CoV-2 evolution"
 author: "Cassia Wagner, Kathryn E Kistler, Garrett A Perchetti, Noah Baker, Lauren A Frisbie, Laura Marcela Torres, Frank Aragona, Cory Yun, Marlin Figgins, Alexander L Greninger, Alex Cox, Hanna N Oltean, Pavitra Roychoudhury, Trevor D Bedford"
-doi: "https://doi.org/10.1101/2023.09.21.23295927 "
-short_cite: "Wagner et al. 2023. medRxiv."
-date: "2023-09-23"
+doi: "https://doi.org/10.1038/s41467-024-47599-5"
+short_cite: "Wagner et al. 2024. Nature Communications."
+date: "2024-04-13"
 ---
 
 ## Abstract

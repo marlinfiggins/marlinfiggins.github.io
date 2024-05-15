@@ -12,6 +12,8 @@ page-layout: article
 title-block-banner: true
 ---
 
+A full and up-to-date list of my publications can be found here on [Google Scholar](https://scholar.google.com/citations?hl=en&user=6EIs9DEAAAAJ&view_op=list_works&sortby=pubdate).
+
 <!-- Adding figures here could be very nice -->
 :::{#publications}
 :::
