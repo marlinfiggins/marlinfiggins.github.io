@@ -4,16 +4,15 @@ listing:
   - id: talks
     contents: ./talks/
     sort: "date desc"
-    type: grid
-    categories: true
     sort-ui: false
     filter-ui: false
+    fields: [date, title, venue]
+    type: default
 page-layout: article
-title-block-banner: false
+title-block-banner: true
 ---
 
-
-This will be a page where I keep my slides
+Here are slides to various talks I've given over the years.
 
 :::{#talks}
 :::

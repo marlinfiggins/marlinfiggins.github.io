@@ -1,6 +1,6 @@
 ---
 title: "From Sequencing to Surveillance: Estimating SARS-CoV-2 variant fitness"
-subtitle: "Seattle Flu Alliance Data Analysis Meeting"
+venue: "Seattle Flu Alliance Data Analysis Meeting"
 author: "Marlin Figgins"
 date: "March 11, 2024"
 date-format: long

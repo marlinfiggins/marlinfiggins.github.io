@@ -64,9 +64,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-venue',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -117,10 +117,10 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -165,81 +165,75 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Talks</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Talks</h1>
+
+
+
+
+<p>Here are slides to various talks I’ve given over the years.</p>
+<div id="listing-talks" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1710140400000" data-listing-file-modified-sort="1715793847908" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1386">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./talks/SFAMeeting/SFA_meeting.html" class="no-external">From Sequencing to Surveillance: Estimating SARS-CoV-2 variant fitness</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./talks/SFAMeeting/SFA_meeting.html" class="no-external"></a>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>This will be a page where I keep my slides</p>
-<div id="listing-talks" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1710140400000" data-listing-file-modified-sort="1715792418162" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1386">
-<a href="./talks/SFAMeeting/SFA_meeting.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-From Sequencing to Surveillance: Estimating SARS-CoV-2 variant fitness
-</h5>
-<div class="card-text listing-description">
-
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Marlin Figgins
-</div>
+<div class="metadata">
+<a href="./talks/SFAMeeting/SFA_meeting.html" class="no-external">
 <div class="listing-date">
 Mar 11, 2024
 </div>
-</div>
-</div>
+<div class="metadata-value listing-venue">
+Seattle Flu Alliance Data Analysis Meeting
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="1662620400000" data-listing-file-modified-sort="1675708862894" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="242">
-<a href="./talks/FredHutchCareerExploration/FHCareerExploration.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Epidemics, evolution, and too much math
-</h5>
-<div class="card-text listing-description">
-
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Marlin Figgins
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1662620400000" data-listing-file-modified-sort="1715792713940" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="242">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./talks/FredHutchCareerExploration/FHCareerExploration.html" class="no-external">Epidemics, evolution, and too much math</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./talks/FredHutchCareerExploration/FHCareerExploration.html" class="no-external">Computational methods for forecasting viral evolution</a>
 </div>
+</div>
+<div class="metadata">
+<a href="./talks/FredHutchCareerExploration/FHCareerExploration.html" class="no-external">
 <div class="listing-date">
 Sep 8, 2022
 </div>
-</div>
-</div>
+<div class="metadata-value listing-venue">
+Fred Hutch Career Exploration
 </div>
 </a>
+</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">
