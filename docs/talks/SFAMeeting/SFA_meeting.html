@@ -396,7 +396,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">From Sequencing to Surveillance: Estimating SARS-CoV-2 variant fitness</h1>
-  <p class="subtitle">SFA Data Analysis Meeting</p>
+  <p class="subtitle">Seattle Flu Alliance Data Analysis Meeting</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -527,7 +527,7 @@ Marlin Figgins
 <section id="generating-the-data" class="slide level2">
 <h2>Generating the data</h2>
 <p>Generally, we want to take sequences and classify them into variant groups such as Nextstrain clade or Pango lineage and then count their occurance per day or week. This will give us data of the form:</p>
-<div id="0bc43722" class="cell" data-execution_count="1">
+<div id="36cbcbc7" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <div>
@@ -636,7 +636,7 @@ p_{v}(t) = \frac{p_{v}(0)\exp(\lambda_v t)}{\sum_{u} p_{u}(0)\exp(\lambda_u t)}.
 <div class="columns">
 <div class="column" style="width:80%;">
 <p>We’ve developed a package called <a href="https://github.com/blab/evofr">evofr</a> that implements these models.</p>
-<div id="e6eadcd0" class="cell" data-execution_count="2">
+<div id="0259be93" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> evofr <span class="im">as</span> ef</span>
 <span id="cb1-2"><a></a></span>
 <span id="cb1-3"><a></a><span class="co"># Loading data as VariantFrequencies</span></span>
@@ -667,14 +667,14 @@ p_{v}(t) = \frac{p_{v}(0)\exp(\lambda_v t)}{\sum_{u} p_{u}(0)\exp(\lambda_u t)}.
 <div class="columns">
 <div class="column">
 <p>Visualizing posterior frequencies:</p>
-<div id="b6b96217" class="cell" data-execution_count="3">
+<div id="45078973" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">from</span> evofr.plotting <span class="im">import</span> FrequencyPlot</span>
 <span id="cb2-2"><a></a>FrequencyPlot(posterior, color_map<span class="op">=</span>colors).plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><img data-src="./figures/posterior_freq.svg"></p>
 </div><div class="column">
 <p>Visualizing growth advantages:</p>
-<div id="95046df3" class="cell" data-execution_count="4">
+<div id="2d794d1e" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">from</span> evofr.plotting <span class="im">import</span> GrowthAdvantagePlot</span>
 <span id="cb3-2"><a></a>GrowthAdvantagePlot(posterior, color_map<span class="op">=</span>colors).plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -702,7 +702,7 @@ p_{v}(t) = \frac{p_{v}(0)\exp(\lambda_v t)}{\sum_{u} p_{u}(0)\exp(\lambda_u t)}.
 </section>
 <section id="using-hierarchical-models-in-evofr" class="slide level2">
 <h2>Using Hierarchical models in Evofr</h2>
-<div id="3080861a" class="cell" data-execution_count="5">
+<div id="16813ea3" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">import</span> evofr <span class="im">as</span> ef</span>
 <span id="cb4-2"><a></a></span>
 <span id="cb4-3"><a></a><span class="co"># Loading data as HierFrequencies</span></span>
