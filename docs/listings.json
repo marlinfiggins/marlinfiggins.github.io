@@ -1,18 +1,13 @@
 [
   {
-    "listing": "/talks.html",
+    "listing": "/publications/publications.html",
     "items": [
-      "/talks/FredHutchCareerExploration/FHCareerExploration.html"
-    ]
-  },
-  {
-    "listing": "/blog/blog.html",
-    "items": [
-      "/blog/ab_testing_intro/ab_testing_intro.html",
-      "/blog/intro-to-probability/intro-to-prob.html",
-      "/blog/social-distancing-and-me/2020-03-04-social-distancing-and-me.html",
-      "/blog/chaos/chaos-what-is-it-where-to-find-it.html",
-      "/blog/dive-into-caluclus-of-variations/dive-into-the-calculus-of-variations.html"
+      "/publications/hct-sars2/hct-sars2.html",
+      "/publications/mpox-dynamics/mpox-dynamics.html",
+      "/publications/ncov-forecasting-fit/ncov-forecasting-fit.html",
+      "/publications/ncov-orf8-ko/ncov-orf8-ko.html",
+      "/publications/hct-omicron/hct-omicron.html",
+      "/publications/rt-from-frequency-dynamics/rt-from-frequency-dynamics.html"
     ]
   },
   {
@@ -26,14 +21,20 @@
     ]
   },
   {
-    "listing": "/publications/publications.html",
+    "listing": "/blog/blog.html",
     "items": [
-      "/publications/hct-sars2/hct-sars2.html",
-      "/publications/mpox-dynamics/mpox-dynamics.html",
-      "/publications/ncov-forecasting-fit/ncov-forecasting-fit.html",
-      "/publications/ncov-orf8-ko/ncov-orf8-ko.html",
-      "/publications/hct-omicron/hct-omicron.html",
-      "/publications/rt-from-frequency-dynamics/rt-from-frequency-dynamics.html"
+      "/blog/ab_testing_intro/ab_testing_intro.html",
+      "/blog/intro-to-probability/intro-to-prob.html",
+      "/blog/social-distancing-and-me/2020-03-04-social-distancing-and-me.html",
+      "/blog/chaos/chaos-what-is-it-where-to-find-it.html",
+      "/blog/dive-into-caluclus-of-variations/dive-into-the-calculus-of-variations.html"
+    ]
+  },
+  {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/SFAMeeting/SFA_meeting.html",
+      "/talks/FredHutchCareerExploration/FHCareerExploration.html"
     ]
   }
 ]
