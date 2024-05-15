@@ -2,10 +2,10 @@
   {
     "listing": "/publications/publications.html",
     "items": [
+      "/publications/ncov-orf8-ko/ncov-orf8-ko.html",
       "/publications/hct-sars2/hct-sars2.html",
       "/publications/mpox-dynamics/mpox-dynamics.html",
       "/publications/ncov-forecasting-fit/ncov-forecasting-fit.html",
-      "/publications/ncov-orf8-ko/ncov-orf8-ko.html",
       "/publications/hct-omicron/hct-omicron.html",
       "/publications/rt-from-frequency-dynamics/rt-from-frequency-dynamics.html"
     ]
