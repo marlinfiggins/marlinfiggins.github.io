@@ -1,0 +1,386 @@
+---
+title: "From Sequencing to Surveillance: Estimating SARS-CoV-2 variant fitness"
+subtitle: "SFA Data Analysis Meeting"
+author: "Marlin Figgins"
+date: "March 11, 2024"
+date-format: long
+format:
+    revealjs:
+        width: 1050
+        height: 700
+slide-number: "c/t"
+bibliography: ./SFA_meeting.bib
+title-block-banner: true
+---
+
+# Introduction
+
+::: {.hidden}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\Expect}{\mathbb{E}}
+\newcommand{\Var}{\text{Var}}
+\newcommand{\Pois}{\text{Poisson}}
+\newcommand{\Multi}{\text{Multi}}
+\newcommand{\Laplace}{\mathcal{L}}
+\newcommand{\Ind}{\mathbf{1}}
+\renewcommand{\vec}[1] {\boldsymbol{\mathbf{#1}}}
+:::
+
+Let's talk about SARS-CoV-2 evolution!
+
+<!-- ## Outline -->
+
+<!-- ### 1. Introduction to SARS-CoV-2 Evolution, Sequencing, and Variant Classification (10 minutes)
+- Brief overview of the SARS-CoV-2 virus, its significance for public health, and the critical need to monitor its evolution.
+- Introduction to the technologies and methodologies used for sequencing SARS-CoV-2 and the role of Nextclade in classifying sequences into variant groups and clades.
+- The importance of scalable and quick methods for tracking the virus's transmission and evolution, setting the stage for the significance of forecasting and fitness estimation.
+
+### 2. The Concept of Selection and Fitness in Viruses (10 minutes)
+- Discussion on the importance of selection: Quantifying variant advantages for awareness and intervention.
+- Explanation of fitness models using different classification levels (haplotype, genotype, Pango lineage, Nextstrain clade) for estimating the fitness of variant groups.
+
+### 3. Estimating Relative Fitness of Variants (10 minutes)
+- Exploration of the concept of relative fitness and how it is derived from sequence counts and variant classifications.
+- Discussion on basic and complex models for estimating relative fitness, with a focus on the multinomial logistic regression model.
+- Use of visual aids from provided figures (Figures 4, 5, 6, 7) to illustrate the estimation process and its significance.
+- Add in section on hierarchical models
+
+### 4. Forecasting Evaluation and Public Health Implications (5 minutes)
+- Overview of automating forecasts for SARS-CoV-2 evolution and the methodologies employed for relative fitness estimation and frequency forecasts.
+- Discussion on the evaluation of forecast models using retrospective data, highlighting findings and insights.
+- Importance of sequencing intensity in enhancing forecast accuracy and the implications of these findings for public health strategy and preparedness.
+
+### 5. Mechanistic Models and Immune Escape (5 minutes)
+- Be short here. Basically just say that we have population level expectations for how frequency dynamics should be changing from mechanistic models
+- Detailed discussion on incorporating mechanistic models into the fitness estimation framework to account for immune escape and increased transmissibility.
+- Examination of the trade-offs between immune escape and transmissibility, including the critical role of modeling in understanding these dynamics.
+- Presentation of how these models help in quantifying the effects of immune escape and transmissibility on variant fitness. -->
+
+<!-- ### Conclusion and Q&A (20 minutes)
+- Summary of the main topics covered: Evolution and sequencing of SARS-CoV-2, fitness and selection, mechanistic models, and forecasting evaluation.
+- Emphasis on the contributions of this work to understanding SARS-CoV-2 evolution and supporting public health decisions.
+- An extended Q&A session to address audience questions and foster engagement. -->
+
+## Evolution and selection in SARS-CoV-2 
+
+![All-time phylogenetic tree for SARS-CoV-2 from Nextstrain](./figures/nextstrain_phylogeny.png)
+
+## Why study selection?
+
+We are interested in the selection in SARS-CoV-2 for two main reasons.
+
+* Awareness: Quantifying variant advantages to understand the viral population right now or in short-term
+
+* Preparation: Forecasting variant advantage to predict viral diversity in the future
+
+Instead of focusing on sequence-based methods which may be computationally infeasible with large numbers of sequences, we use coarser labels for estimating fitness of groups. 
+
+These labels can be at granular as you choose such as:
+
+- haplotype,
+- Pango lineage,
+- Nextstrain clade.
+
+## Selection and Evolution
+
+::: columns 
+
+::: {.column width="40%"}
+::: {.r-fit-text}
+- **Selection** is the process by which individuals have higher fitness in certain environments
+- **Evolution** is the change in the genetic composition of the population over time due to selection and heritable variation
+- **Relative fitness** is the relative capacity for individuals to reproduce in a population
+:::
+:::
+
+::: {.column width="60%"}
+![Simulated neutral frequency dynamics](./figures/neutral_frequencies.svg){fig-align="center"}
+![Simulated frequency dynamics with selection](./figures/selection_frequencies.svg){fig-align="center"}
+:::
+:::
+
+## Illustrating selection
+
+:::rows
+::: {.row height="60%"}
+![](figures/transmission_tree_offspring_colored.svg){fig-align="center"}
+:::
+::: {.row height="30%"}
+::: {.r-fit-text}
+- An early mutation that takes us from [green]{style="color:green"} infections to [purple]{style="color:purple"} which cause more secondary infection.
+- In this case, the [purple]{style="color:purple"} is selected for.
+:::
+:::
+:::
+
+## Quantifying selection and relative fitness
+
+::: columns 
+
+::: {.column width="35%"}
+::: {.r-fit-text}
+- Often, we're interested in not just the presence of selection but its magnitude.
+- When quantifying selection, you'll often see **selective coefficient** or **relative fitness** discussed.
+- **Relative fitness** is the difference in the growth rates of two variants i.e. the relative capacity for individuals to reproduce in a population
+:::
+:::
+
+::: {.column width="65%"}
+::: {layout-nrow=3}
+![](./figures/selection_frequencies_weak.svg){fig-align="center"}
+![](./figures/selection_frequencies_moderate.svg){fig-align="center"}
+![](./figures/selection_frequencies_strong.svg){fig-align="center"}
+:::
+:::
+:::
+
+**Remark**: For those familiar with the selective coefficient $s$, the relative fitness $\lambda$ is given by $(1 + s) = \exp(\lambda)$
+
+
+## Generating the data
+
+Generally, we want to take sequences and classify them into variant groups such as Nextstrain clade or Pango lineage and then count their occurance per day or week. This will give us data of the form:
+
+```{python}
+import pandas as pd
+from IPython.display import display
+variant_counts = pd.read_csv("./data/variant_counts.tsv", sep="\t")
+
+display(variant_counts.head(7))
+```
+
+Data of this form is automatically generated at the level of US state and country in [forecasts-ncov]().
+
+## Generating sequence counts
+
+![](./figures/sampled_counts.svg)
+
+
+## Estimating relative fitness of variants
+
+::: columns
+
+::: {.column width="100%"}
+::: {.r-fit-text}
+If we're interested in estimating the relative fitness of variants from sequence counts, we need to model the change in frequencies over time.
+
+We want to turn these into frequency and estimate the relative fitness we discussed before using the following equation:
+
+$$
+p_{v}(t) = \frac{p_{v}(0)\exp(\lambda_v t)}{\sum_{u} p_{u}(0)\exp(\lambda_u t)}.
+$$
+
+This means that we're estimating the following parameters:
+
+- $p_{v}(t)$ is the frequency of variant $v$ at time $t$.
+
+- $p_{v}(0)$ is the initial frequency of variant $v$.
+
+- $\lambda_{v}$ is the relative fitness of variant $v$.
+
+We'll often work with the **growth advantage** $\Delta_v = \exp(\lambda_{v} \tau)$ where $\tau$ is the generation time.
+:::
+:::
+
+:::
+
+## Estimating relative fitness using `evofr` { .smaller }
+
+::: {.columns}
+::: {.column width=80%}
+We've developed a package called [evofr](https://github.com/blab/evofr) that implements these models.
+
+```{python}
+#| eval: false
+#| echo: true 
+import evofr as ef
+
+# Loading data as VariantFrequencies
+variant_counts = pd.read_csv("./data/variant_counts.tsv", sep="\t")
+data = ef.VariantFrequencies(
+    raw_seq = variant_counts,
+    pivot = "wildtype"
+)
+
+# Define model: tau is generation time
+model = ef.MultinomialLogisticRegression(tau=1)
+
+# Do inference using NUTS MCMC
+inference_method = ef.InferNUTS(
+    num_samples=500, 
+    num_warmup=100
+    )
+
+posterior = inference_method.fit(model, data)
+```
+:::
+
+
+::: {.column width=20%}
+
+:::
+::: 
+
+## Estimating relative fitness with `evofr` {.smaller}
+
+::: {.columns}
+::: {.column}
+Visualizing posterior frequencies:
+
+```{python}
+#| eval: false
+#| echo: true 
+from evofr.plotting import FrequencyPlot
+FrequencyPlot(posterior, color_map=colors).plot()
+```
+
+![](./figures/posterior_freq.svg)
+
+:::
+::: {.column}
+
+Visualizing growth advantages:
+
+```{python}
+#| eval: false
+#| echo: true 
+from evofr.plotting import GrowthAdvantagePlot
+GrowthAdvantagePlot(posterior, color_map=colors).plot()
+```
+
+![](./figures/posterior_ga.svg)
+
+:::
+:::
+
+## Estimating relative fitness across multiple locations 
+
+::: {.columns}
+::: {.column width=60%}
+This idea is pretty simple, we're just saying that we think the relative fitnesses should be similar across geographies:
+$$
+\lambda_{v, g} \sim \text{Normal}(\bar{\lambda}_v, \sigma_{v})
+$$
+
+$\lambda_{v,g}$ is the relative fitness of variant $v$ in geography $g$.
+
+$\bar{\lambda}$ is the mean relative fitness of variant $v$ across geographies.
+
+$\sigma_v$ is the standard deviation in the relative fitness of $v$.
+
+This is called **partial pooling** and it allows us to share information about the relative fitness across locations.
+
+Low-data locations can receive information about variants that they haven't seen yet or are below detectable levels.
+
+:::
+::: {.column width=40%}
+
+![](./figures/pooling.png)
+
+[Source: Carpenter, Gabry, Goodrich.](https://cran.r-project.org/web/packages/rstanarm/vignettes/pooling.html)
+:::
+::: 
+
+## Using Hierarchical models in Evofr
+
+```{python}
+#| eval: false
+#| echo: true 
+
+import evofr as ef
+
+# Loading data as HierFrequencies
+# Your data .csv should now have a location column
+variant_counts = pd.read_csv("./data/variant_counts.tsv", sep="\t")
+data = ef.HierFrequencies(
+    raw_seq = variant_counts,
+    pivot = "wildtype",
+    group="location"
+)
+
+model = ef.HierMLR(tau=1, pool_scale=1e-4)
+
+# Do inference using NUTS MCMC
+inference_method = ef.InferNUTS(
+    num_samples=500, 
+    num_warmup=100
+    )
+
+posterior = inference_method.fit(model, data)
+```
+
+# Automating variant forecasts
+
+## Automating SARS-CoV-2 variant frequency forecasts: forecasts-ncov
+
+::: .rows
+
+::: {.row height=60%}
+- We've developed a pipeline for:
+    - provisioning these sequence count data sets from both GISAID and open data, 
+    - running the hierarchical MLR models on these data sets, 
+    - and visualizing their results at [https://nextstrain.org/sars-cov-2/forecasts/](https://nextstrain.org/sars-cov-2/forecasts/).
+- This work was done with Jover Lee, James Hadfield, and Trevor Bedford.
+:::
+
+::: {.row height=40%}
+
+::: {layout-ncol=3}
+![](./figures/collaborators/jover.png)
+
+![](./figures/collaborators/james.png)
+
+![](./figures/collaborators/trevor.png)
+:::
+
+:::
+:::
+
+## Nextstrain SARS-CoV-2 forecasts ([link](https://nextstrain.org/sars-cov-2/forecasts/))
+
+<iframe width="2400" height="650" src="https://nextstrain.github.io/forecasts-ncov/" frameborder="0" allowfullscreen></iframe>
+
+## Seattle Flu Alliance Dashboard ([link](https://seattleflu.org/sars-cov-2-forecasts))
+
+- Amanda Perofsky has led the charge of applying this kind of pipeline to Seattle Flu Alliance data.
+
+## Seattle Flu Alliance Dashboard ([link](https://seattleflu.org/sars-cov-2-forecasts))
+
+<iframe width="2400" height="650" src="https://covidforecasting.brotmanbaty.org/forecasts-ncov-wa/index.html" frameborder="0" allowfullscreen></iframe>
+
+# Evaluating forecasts
+[Fitness models provide accurate short-term forecasts of SARS-CoV-2 variant frequency](https://www.medrxiv.org/content/10.1101/2023.11.30.23299240v1)
+
+::: {layout-ncol=2}
+![](./figures/collaborators/eslam.png)
+
+![](./figures/collaborators/trevor.png)
+:::
+
+
+## Forecasting variant frequencies is complicated!
+
+- As we continue to develop these kinds of models, it's essential to think about what they can do and when they work best!
+
+![](./figures/dynamic_est_env.png)
+
+## Mimicking real-time forecast environments
+
+- As we continue to develop these kinds of models, it's essential to think about what they can do and when they work best!
+
+![](./figures/dynamic_est_env_forecasts.png)
+
+## Evaluating forecasts
+
+- We find that in general existing frequency dynamic models work well for short-term forecasts.
+
+![](./figures/model_comp.png)
+
+
+## Conclusions
+
+- Estimating variant fitness with coarse-grain sequence counts can be useful for monitoring the rise of variants
+- We've implemented the methodology for doing this and sharing information across geographies in a software package `evofr`.
+- There's a lot of room to expand and adapt these methods to different pathogens as well as to extend them to incorporate new data sources .etc
+
+## Questions?

@@ -13,3 +13,6 @@ format:
     width: 1050
     height: 700
     slide-number: "c/t"
+render:
+  - "*.qmd"
+  - "!*.ipynb"
