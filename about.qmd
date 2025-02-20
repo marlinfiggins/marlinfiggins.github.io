@@ -23,15 +23,16 @@ format:
 **Who am I?**
 
 My name is Marlin Figgins and welcome to my blog. 
-I am currently a final year PhD candidate in the [University of Washington’s Department of Applied Mathematics](https://amath.washington.edu/people/marlin-figgins) as a Boeing, ARCS, and NSF GRFP fellow. 
 
-I currently develop Bayesian methods for inference and forecasting of epidemic and evolutionary dynamics of respiratory viruses in the [Bedford lab](https://bedford.io/) at the Fred Hutchinson Cancer Research Center. You can learn about this work and more on the [Research](research) page.
+My work focuses on building robust data and evaluation infrastructure, designing end-to-end modeling pipelines, and developing methods that integrate domain structure with quantitative techniques. I’m driven by the challenge of making complex systems more transparent and predictable, combining statistical modeling and AI with software engineering principles to create tools and products that are innovative, rigorous, and impactful.
+
+<!-- I currently develop Bayesian methods for inference and forecasting of epidemic and evolutionary dynamics of respiratory viruses in the [Bedford lab](https://bedford.io/) at the Fred Hutchinson Cancer Research Center. You can learn about this work and more on the [Research](research) page. -->
 
 For more on my professional life, you can check out my CV / Resume in PDF format on this page.
 
 **Get in contact? Stay in contact?**
 
-If you need to contact me for any reason, my personal email is marlinfiggins [at] gmail [dot] com, but I can also be reached mfiggins [at] uw [dot] edu.
+If you need to contact me for any reason, my personal email is marlinfiggins [at] gmail [dot] com.
 
 
 <!-- ## Education

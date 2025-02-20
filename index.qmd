@@ -43,7 +43,7 @@ listing:
 
 ### Who am I?
 
-I’m Marlin Figgins, a soon-to-be PhD graduate in Applied Mathematics from the University of Washington. I specialize in statistical modeling, machine learning, and applied mathematics to solve complex problems in evolutionary biology, public health, and natural language processing. I’m passionate about creating solutions that are innovative, scalable, accessible, and, most importantly, impactful.
+I’m Marlin Figgins, a researcher and scientist developing scalable, interpretable models across artificial intelligence, natural language processing, and computational biology. My work focuses on building robust data and evaluation infrastructure, designing end-to-end modeling pipelines, and developing methods that integrate domain structure with quantitative techniques. I’m driven by the challenge of making complex systems more transparent and predictable, combining statistical modeling and AI with software engineering principles to create tools and products that are innovative, rigorous, and impactful.
 
 ### What do I do?
 
