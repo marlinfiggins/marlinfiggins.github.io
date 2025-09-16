@@ -17,7 +17,7 @@ about:
       href: https://github.com/marlinfiggins
     - icon: envelope-paper
       text: Resume
-      href: https://www.dropbox.com/scl/fi/ab9ya42zqd75rap60vbwn/Figgins_Resume.docx?rlkey=s7nb41vptnw4vhiy8bz0q9vt3&dl=0
+      href: https://docs.google.com/document/d/1b8IadK_kUsMB8RHneZy0YpqTsOYUBAfPIm342WoeubI/edit?usp=sharing
     - icon: mortarboard-fill
       text: Google Scholar
       href: https://scholar.google.com/citations?hl=en&user=6EIs9DEAAAAJ&view_op=list_works

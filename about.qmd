@@ -14,7 +14,7 @@ about:
       href: https://github.com/marlinfiggins
     - icon: resume
       text: Resume
-      href: https://www.dropbox.com/scl/fi/ab9ya42zqd75rap60vbwn/Figgins_Resume.docx?rlkey=s7nb41vptnw4vhiy8bz0q9vt3&dl=0
+      href: https://docs.google.com/document/d/1b8IadK_kUsMB8RHneZy0YpqTsOYUBAfPIm342WoeubI/edit?usp=sharing
 format:
   html:
     page-layout: full
