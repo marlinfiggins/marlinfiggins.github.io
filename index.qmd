@@ -48,8 +48,11 @@ Previously. Built automated forecasting systems for respiratory virus evolution 
 Now. Open to technical roles building and evaluating real systems. Relevant job titles would be machine learning engineer / researcher, member of technical staff, or quantitative researcher.
 
 Current work.
+
 - Reward and evaluation design. Designing rewards and evals that stay useful even when a model is learning to break them.
+
 - Biosecurity systems. Screening and functional characterization of natural and designed sequences. Static benchmarks lose relevance when inputs are chosen adversarially during deployment.
+
 - Representation geometry in sequence models. Investigating whether protein and language models represent underlying biological structure or use shortcuts. Developing training tasks which force the former.
 
 
